@@ -1,0 +1,18 @@
+package Library.Runner;
+import Library.*;
+
+public class Library {
+
+	public static void main(String[] args) {
+		
+		Book[] bookArray = {
+			new ReadableBook("ReadMe", 3),
+			new ReadableBook("ReadMoo", 2),
+		};
+		bookArray[0] = new ReadableBook("ReadableBook1", 3);
+		bookArray[1] = new ReadableBook("ReadableBook2", 2);
+		
+		System.out.println(book);
+	}
+
+}

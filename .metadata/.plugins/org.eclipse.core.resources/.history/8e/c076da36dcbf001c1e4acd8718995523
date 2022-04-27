@@ -1,0 +1,16 @@
+package javabootcamp.oopexam.DollToy;
+
+import javabootcamp.oopexam.Toy.Toy;
+
+public class DollToy extends Toy {
+	private Softness softness;
+	
+	public DollToy() {
+		softness = Softness.SOFT;
+	}
+}
+
+enum Softness{
+	SOFT,
+	HARD
+}

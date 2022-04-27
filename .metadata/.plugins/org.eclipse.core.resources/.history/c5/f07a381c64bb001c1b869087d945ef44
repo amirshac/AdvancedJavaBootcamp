@@ -1,0 +1,47 @@
+package Library;
+
+public abstract class Book implements Readable {
+	private int quantity;
+	private int maxQuantity;
+	private String name;
+	private BookType bookType;
+	
+	
+	public Book(String name, int quantity) {
+		this.name = name;
+		this.quantity = quantity;
+		this.maxQuantity = quantity;
+		//bookType = bookType;
+	}
+	
+	@Override
+	public String toString() {
+		String msg = new String();
+		msg += String.format("<Book> Name: %s, Quantity: %d", name, quantity);
+		return msg;
+	}
+	
+	public void approach() {
+		read();
+	}
+	
+	public void read() {
+		if (quantity > 0) {
+			System.out.println("Reading -> " + this);
+			quantity --;
+		} else
+			System.out.println("Not in inventory " + this);
+	}
+	
+	public void returnBook() {
+		quantity ++;
+		System.out.println("Returning " + this);
+	}
+	
+	enum BookType{
+		COOKING,
+		NOVEL,
+		DICTIONARY
+	}
+}
+

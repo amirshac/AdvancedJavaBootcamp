@@ -1,0 +1,12 @@
+package javabootcamp.oopexam.Runner;
+import javabootcamp.oopexam.Toy.Toy;
+
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Toy toyArray = new toy(5);
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package Airport;
+
+public class Flyer {
+	private static long flyerIDCounter;
+	
+	static {
+		flyerIDCounter = 0;
+	}
+	
+	private String firstName;
+	private String lastName;
+	private long flyerID;
+}

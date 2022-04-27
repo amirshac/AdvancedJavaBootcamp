@@ -1,0 +1,13 @@
+package VendingMachine.VendingMachine;
+
+public interface Containerable {
+	
+	ContainerType container;
+	
+	public void setContainer(ContainerType container);
+	
+	enum ContainerType{
+		CAN,
+		BOTTLE
+	}
+}

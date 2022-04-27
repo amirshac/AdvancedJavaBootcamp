@@ -1,0 +1,27 @@
+package VendingMachine.VendingMachine;
+
+public class ColdDrink extends Drink{
+	
+	//fields
+	protected int ingridient;
+	protected int bottled;
+	
+	public ColdDrink(String name, int price, int volume, int temprature) {
+		super(name, price, volume, temprature);
+		this.setTemprature(temprature);
+	}
+	
+	@Override
+	public void setTemprature(int temprature) {
+		if (temprature < 2)
+			this.temprature = 2;
+		else if (temprature > 5)
+			this.temprature = 5;
+	}
+	
+	@Override
+	public void produce() {
+		super.produce();
+	}
+
+}

@@ -1,0 +1,14 @@
+package VendingMachine.VendingMachine;
+
+public class Cola extends ColdDrink{
+	
+	// constructors
+	public Cola() {
+		super("Cola", 100, 7, 2);
+	}
+	
+	@Override
+	public void produce() {
+		super.produce();
+	}
+}

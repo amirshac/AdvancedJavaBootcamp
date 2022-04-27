@@ -1,0 +1,26 @@
+package Library;
+
+public class BorrowableBook extends Books implements Borrowable {
+
+	private int borrowingDays;
+	
+	public BorrowableBook(String name, int quantity, int borrowingDays) {
+		super(name, quantity);
+		this.borrowingDays = borrowingDays;
+	}
+	
+	public void borrow() {
+		
+	}
+	
+	public void approach() {
+		
+	}
+	
+	@Override
+	public String toString() {
+		String msg = super.toString();
+		msg += String.format("<Borrowing> Days: %d", borrowingDays);
+		return msg;
+	}
+}

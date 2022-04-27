@@ -1,0 +1,17 @@
+package VendingMachine.VendingMachine;
+
+public class S extends ColdDrink{
+	
+	protected boolean isCanned;
+	
+	// constructors
+	public Cola() {
+		super("Cola", 100, 7, 2);
+		isCanned = true;
+	}
+	
+	@Override
+	public void produce() {
+		super.produce();
+	}
+}

@@ -1,0 +1,18 @@
+package VendingMachine.VendingMachine;
+
+public class SoftDrink extends ColdDrink{
+	
+	private static String DEF_NAME = "SoftDrink";
+	
+	SoftDrinkType drinkType;
+	
+	public SoftDrink() {
+		setName(DEF_NAME);
+		drinkType = SoftDrinkType.SQUEEZED;
+	}
+	
+	enum SoftDrinkType {
+			SQUEEZED,
+			PASTURIZED
+	}
+}

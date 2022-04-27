@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="javabootcamp.oop.exercise.HomeAppliance"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode"/>
+    <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode.Status"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.SSLEngineResult.Status"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.Produceable"/>
+    <fullyQualifiedTypeName name="VendingMachine.exeRunner.VendingMachine"/>
+    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.ColdDrink"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.HotDrink.HotDrinkType"/>
+    <fullyQualifiedTypeName name="Library.ReadableBook"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="Airport.Flight"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="javabootcamp.oopexam.Playable.Playable"/>
+    <fullyQualifiedTypeName name="javabootcamp.oopexam.Toy.Toy"/>
+    <fullyQualifiedTypeName name="javabootcamp.oopexam.Kid.Kid"/>
+    <fullyQualifiedTypeName name="javabootcamp.oopexam.DollToy.DollToy"/>
+    <fullyQualifiedTypeName name="javabootcamp.oopexam.ElectricToy.ElectricToy"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+</qualifiedTypeNameHistroy>

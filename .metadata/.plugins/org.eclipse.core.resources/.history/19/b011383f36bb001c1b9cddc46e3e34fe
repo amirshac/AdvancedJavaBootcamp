@@ -1,0 +1,18 @@
+package VendingMachine.VendingMachine;
+
+public class Cola extends Soda {
+	
+	private static String DEF_NAME = "Cola";
+	private static float DEF_COLA_PRICE = 9f;
+	
+	public Cola() {
+		setName(DEF_NAME);
+		setIngridient(IngridientType.COLA_SYRUP);
+		setPrice(DEF_COLA_PRICE);
+	}
+
+	@Override
+	public void produce() {
+		super.produce();
+	}
+}

@@ -1,0 +1,68 @@
+package VendingMachine.exeRunner;
+
+import java.util.Scanner;
+
+import VendingMachine.VendingMachine.*;
+
+public class VendingMachine {
+	public static int milkQtt;
+	public static int waterQtt;
+
+	static {
+		milkQtt = 1000;
+		waterQtt = 2000;
+	}
+
+	public static void main(String[] args) {
+	  Scanner sc = new Scanner(System.in);
+	  while(true) {
+	    showMenu();
+	    int opt = Integer.parseInt(sc.next());
+	    if(opt == 0)
+	      break;
+	    
+	    Produceable drink = createDrink(opt);
+	    drink.produce();
+	    
+	  }
+	  sc.close();
+	}
+
+	//factory
+	private static Produceable createDrink(int opt) {
+		switch (opt) {
+		case 0: break;
+		case 1: // return new HotChocolate(........);
+		case 2: // return new Espresso(........);
+		case 3: // return new Cappuccino(........);
+		case 4: // return new Latte(........);
+		case 5: return new Soda();
+		case 6: return new Cola();
+		case 7: return new Sprite();
+		case 8: // return new OrangeJuice(........);
+		case 9: // return new AppleJuice(........);
+			
+		//case 9: return new ColdDrink("ColdDrink");
+		//case 10: return new Soda();
+		}
+		
+		return null;
+	}
+
+	public static void showMenu() {
+		VendingMachine.printStatus();
+		
+		
+		System.out.println("Please select a drink or enter 0 to exit:");
+		System.out.println("1. Hot Chocolate " + "2. Hot Espresso " + "3. Hot Cappuccino " + "4. Hot Latte "
+				+ "5.Sodawater " +"6. Cola " + "7. Sprite " + "8. Orange Juice " + "9. Apple Juice");
+	}
+	
+	public static void printStatus() {
+		String msg = new String();
+		msg += "---------------------------------------------------\n";
+		msg += String.format("Vending machine status: water %d, milk %d%n", waterQtt, milkQtt);
+		msg += "---------------------------------------------------\n";
+		System.out.println(msg);
+	}
+}

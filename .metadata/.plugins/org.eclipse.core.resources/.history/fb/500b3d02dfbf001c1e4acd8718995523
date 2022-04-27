@@ -1,0 +1,14 @@
+package javabootcamp.oopexam.ToyPlayedByKid;
+
+import javabootcamp.oopexam.Kid.Kid;
+import javabootcamp.oopexam.Toy.Toy;
+
+public class ToyPlayedByKid {
+	private Toy toy;
+	private Kid kid;
+	
+	public ToyPlayedBykid(Toy toy, Kid kid) {
+		this.toy = toy;
+		this.kid = kid;
+	}
+}

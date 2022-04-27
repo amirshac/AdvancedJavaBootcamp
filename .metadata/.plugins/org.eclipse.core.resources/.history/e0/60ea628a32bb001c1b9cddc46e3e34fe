@@ -1,0 +1,17 @@
+package VendingMachine.VendingMachine;
+
+public class Cola extends Soda {
+	
+	public Cola() {
+		this.name = "Cola";
+		this.setVolume(70);
+		this.setPrice(10);
+		this.setContainer(ContainerType.CAN);
+		this.ingridient = 1;
+	}
+
+	@Override
+	public void produce() {
+		super.produce();
+	}
+}

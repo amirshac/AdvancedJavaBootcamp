@@ -1,0 +1,29 @@
+package VendingMachine.VendingMachine;
+
+public class Soda extends ColdDrink{
+	
+	protected String containerType;
+	
+	// constructors
+	public Soda() {
+		super("Soda", 100, 7, 2);
+		this.ingridient = 0;
+		containerType = "Can";
+	}
+	
+	public Soda(String name) {
+		super(name);
+	}
+	
+	@Override
+	public String toString() {
+		String msg = new String;
+		msg = super.toString();
+		msg += String.format("%n<Soda> container: %s", this.containerType);
+	}
+	
+	@Override
+	public void produce() {
+		super.produce();
+	}
+}

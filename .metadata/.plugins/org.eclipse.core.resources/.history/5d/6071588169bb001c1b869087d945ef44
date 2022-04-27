@@ -1,0 +1,6 @@
+package Library;
+
+public class PurchasableBook extends BorrowableBook implements Purchasable{
+	private int price;
+	
+}

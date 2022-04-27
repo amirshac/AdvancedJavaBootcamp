@@ -1,0 +1,13 @@
+package VendingMachine.VendingMachine;
+
+public class OrangeDrink extends SoftDrink{
+
+	private static String DEF_NAME = "Orange Juice";
+	
+	public OrangeDrink() {
+		setName(DEF_NAME);
+		this.setIngridient(IngridientType.ORANGE);
+		this.drinkType = SoftDrinkType.SQUEEZED;
+		this.setVolume(150);
+	}
+}

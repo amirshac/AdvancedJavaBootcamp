@@ -1,0 +1,9 @@
+package javabootcamp.oopexam.Toy;
+enum AgeGroup{
+	A,
+	B,
+	C,
+	AB,
+	BC,
+	ABC
+}

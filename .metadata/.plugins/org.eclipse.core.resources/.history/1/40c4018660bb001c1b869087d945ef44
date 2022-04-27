@@ -1,0 +1,33 @@
+package Library;
+
+public abstract class Book implements Readable {
+	private int quantity;
+	private String name;
+	private BookType bookType;
+	
+	
+	public Book(String name, int quantity) {
+		this.name = name;
+		this.quantity = quantity;
+		.name..bookType = bookType;
+	}
+	
+	@Override
+	public String toString() {
+		String msg = new String();
+		msg += String.format("<Book> Name: %s, Quantity: %d, Type: %s", name, quantity, bookType);
+		return msg;
+	}
+	
+	@Override
+	public void approach() {
+		
+	}
+	
+	enum BookType{
+		COOKING,
+		NOVEL,
+		DICTIONARY
+	}
+}
+

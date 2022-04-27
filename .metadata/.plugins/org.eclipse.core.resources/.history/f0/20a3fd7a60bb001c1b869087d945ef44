@@ -1,0 +1,12 @@
+package Library;
+
+public class ReadableBook extends Book{	
+	public ReadableBook(String name, int quantity, BookType bookType) {
+		super(name, quantity, bookType);
+	}
+	
+	@Override
+	public void approach() {
+		
+	}
+}

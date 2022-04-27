@@ -1,0 +1,9 @@
+package SelfStudy.Hashmap;
+import java.util.HashMap;
+
+public class Maps {
+	
+	public static void main(String[] args) {
+		HashMap 
+	}
+}

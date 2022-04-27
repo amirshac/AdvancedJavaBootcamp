@@ -1,0 +1,25 @@
+package javabootcamp.oopexam.Runner;
+import javabootcamp.oopexam.DollToy.DollToy;
+import javabootcamp.oopexam.ElectricToy.ElectricToy;
+import javabootcamp.oopexam.Kid.*;
+import javabootcamp.oopexam.Toy.*;
+
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		Kid kid1 = new Kid("Martin", 5);
+		kid kid2 = new Kid("Hana", 3);
+		
+		Toy[] toyArray = new Toy[5];
+		toyArray[0] = new Toy("Toyo");
+		toyArray[1] = new DollToy("Dolly");
+		toyArray[2] = new DollToy("Dolla");
+		toyArray[3] = new ElectricToy("Electro");
+		toyArray[4] = new ElectricToy("Electra");
+		
+		
+	}
+
+}

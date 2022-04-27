@@ -1,0 +1,18 @@
+package VendingMachine.VendingMachine;
+
+public class Sprite extends Soda {
+	private static String DEF_NAME = "Sprite";
+	
+	public Sprite() {
+		setName(DEF_NAME);
+		setIngridient(IngridientType.LIME_SYRUP);
+	}
+
+	@Override
+	public void produce() {
+		super.produce();
+	}
+
+	
+
+}

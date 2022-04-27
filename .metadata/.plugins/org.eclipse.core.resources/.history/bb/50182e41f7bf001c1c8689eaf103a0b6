@@ -1,0 +1,39 @@
+package javabootcamp.oopexam.Runner;
+import java.time.LocalDate;
+
+import javabootcamp.oopexam.DollToy.DollToy;
+import javabootcamp.oopexam.ElectricToy.ElectricToy;
+import javabootcamp.oopexam.Kid.*;
+import javabootcamp.oopexam.Toy.*;
+
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		Kid kid1 = new Kid("Martin", 5);
+		Kid kid2 = new Kid("Hana", 3);
+		Kid oldKid = new Kid("Mike", 11);
+		Toy[] toyArray = new Toy[5];
+		LocalDate date, oldDate;
+		
+		date = LocalDate.of(2022,1,1);
+		
+		toyArray[0] = new Toy("Toyo", date);
+		toyArray[1] = new DollToy("Dolly");
+		toyArray[2] = new DollToy("Dolla");
+		toyArray[3] = new ElectricToy("Electro");
+		toyArray[4] = new ElectricToy("Electra");
+		
+		toyArray[0].setKid(kid1);
+		toyArray[1].setKid(kid1);
+		toyArray[2].setKid(kid2);
+		toyArray[3].setKid(kid2);
+		toyArray[4].setKid(kid2);
+		
+		for (Toy toy : toyArray) {
+			toy.Play();
+		}
+	}
+
+}

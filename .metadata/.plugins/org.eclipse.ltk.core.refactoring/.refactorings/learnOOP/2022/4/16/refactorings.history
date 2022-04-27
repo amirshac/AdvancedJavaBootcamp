@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;bootcamp.oop.basic&apos; to &apos;Bootcamp projects/src&apos;&#x0D;&#x0A;- Original project: &apos;learnOOP&apos;&#x0D;&#x0A;- Destination element: &apos;Bootcamp projects/src&apos;&#x0D;&#x0A;- Original element: &apos;learnOOP/src/bootcamp.oop.basic&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=Bootcamp projects/src" element1="/src&lt;bootcamp.oop.basic" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1649954067029" version="1.0"/>
+</session>

@@ -1,0 +1,11 @@
+package javabootcamp.oopexam.Kid;
+
+public class Kid {
+	private String name;
+	private int age;
+	
+	public Kid(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}

@@ -1,0 +1,15 @@
+package VendingMachine.VendingMachine;
+
+import VendingMachine.VendingMachine.Soda.ContainerType;
+
+public class Sprite extends Soda{
+	
+	public Sprite() {
+		this.name = "Cola";
+		this.setVolume(70);
+		this.setPrice(10);
+		this.setContainer(ContainerType.BOTTLE);
+		this.ingridient = 2;
+	}
+	
+}

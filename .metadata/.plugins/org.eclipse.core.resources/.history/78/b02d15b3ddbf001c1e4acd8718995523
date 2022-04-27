@@ -1,0 +1,49 @@
+package javabootcamp.oopexam.DollToy;
+
+import javabootcamp.oopexam.Toy.Toy;
+
+public class DollToy extends Toy {
+	private Softness softness;
+	private int dirtyness;
+	
+	public DollToy() {
+		dirtyness = 0;
+		softness = Softness.SOFT;
+		
+		//this.setAgeGroup(AgeGroup.AB);
+	}
+	
+	@Override
+	public void Play() {
+		super.Play();
+		
+	}
+
+	// setters getters
+	public Softness getSoftness() {
+		return softness;
+	}
+
+	public void setSoftness(Softness softness) {		
+		this.softness = softness;
+	}
+
+	public int getDirtyness() {
+		return dirtyness;
+	}
+
+	public void setDirtyness(int dirtyness) {
+		if (dirtyness < 0)
+			dirtyness = 0;
+		else if (dirtyness > 10)
+			dirtyness = 10;
+		
+		this.dirtyness = dirtyness;
+	}
+		
+}
+
+enum Softness{
+	SOFT,
+	HARD
+}

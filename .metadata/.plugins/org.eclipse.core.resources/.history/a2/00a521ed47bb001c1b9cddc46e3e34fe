@@ -1,0 +1,33 @@
+package VendingMachine.VendingMachine;
+
+public class HotEspresso extends HotDrink{
+	
+	private static String DEF_NAME = "Hot Espresso";
+	private static int DEF_SHOT_VOLUME = 50;
+	private static int MAX_SHOTS = 3;
+	private static int MIN_SHOTS = 1;
+	private static int DEF_SHOTS = 1;
+
+	private int shots;
+	
+	public HotEspresso() {
+		this(DEF_SHOTS);
+		setName(DEF_NAME);
+	}
+	
+	public HotEspresso(int shots) {
+		this.setShotsAndVolume(shots);
+		setName(DEF_NAME);
+	}
+	
+	public void setShotsAndVolume(int shots) {
+		if (shots > MAX_SHOTS) 
+			shots = MAX_SHOTS; 
+		else if (shots < MIN_SHOTS) {
+			shots = MIN_SHOTS;	
+			
+		this.shots = shots;
+		
+		this.setVolume(this.shots * DEF_SHOT_VOLUME);
+	}
+}

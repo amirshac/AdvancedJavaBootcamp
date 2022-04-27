@@ -1,0 +1,8 @@
+enum AgeGroup{
+	A,
+	B,
+	C,
+	AB,
+	BC,
+	ABC
+}

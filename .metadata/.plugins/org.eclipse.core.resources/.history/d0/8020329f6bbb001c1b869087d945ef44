@@ -1,0 +1,13 @@
+package Library.Runner;
+import Library.*;
+
+public class Library {
+
+	public static void main(String[] args) {
+		
+		Book book = new ReadableBook("ReadableBook1", 3);
+		Book book = new ReadableBook("ReadableBook2", 2);
+		System.out.println(book);
+	}
+
+}

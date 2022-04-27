@@ -1,0 +1,25 @@
+package javabootcamp.oopexam.DollToy;
+
+import javabootcamp.oopexam.Toy.Toy;
+
+public class DollToy extends Toy {
+	private Softness softness;
+	private int dirtyness;
+	
+	public DollToy() {
+		dirtyness = 0;
+		softness = Softness.SOFT;
+		
+		//this.setAgeGroup(AgeGroup.AB);
+	}
+	
+	@Override
+	public void Play() {
+		super.Play();
+	}
+}
+
+enum Softness{
+	SOFT,
+	HARD
+}

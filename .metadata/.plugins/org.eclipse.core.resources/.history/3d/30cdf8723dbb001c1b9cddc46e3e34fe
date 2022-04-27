@@ -1,0 +1,40 @@
+package VendingMachine.VendingMachine;
+
+public class HotDrink extends Drink{
+	
+	// fields
+	private static int DEF_SUGAR = 1;
+	private static int MIN_SUGAR = 0;
+	private static int MAX_SUGAR = 5;
+
+	private static int DEF_TEMPRATURE = 70;
+	private static int MIN_TEMPRATURE = 60;
+	private static int MAX_TEMPRATURE = 90;
+	
+	protected HotDrinkType type;
+	protected HotDrinkBase base;
+	
+	protected int sugarTeaspoons;
+	protected int milkVolume;
+	
+	// constructors
+	
+	// setters
+	@Override
+	public void setTemprature(int temprature) {
+		if (temprature > MAX_TEMPRATURE)
+			this.temprature = DEF_TEMPRATURE;
+		else if (temprature < MIN_TEMPRATURE)
+			this.temprature = DEF_TEMPRATURE;
+	}
+	
+	enum HotDrinkType{
+		COFFEE,
+		CHOCOLATE
+	}
+	
+	enum HotDrinkBase{
+		WATER,
+		MILK
+	}
+}

@@ -1,0 +1,15 @@
+package VendingMachine.VendingMachine;
+
+public class HotDrink extends Drink{
+	
+	// fields
+	protected HotDrinkBase base;
+	
+	// constructors
+	
+	
+	enum HotDrinkBase{
+		COFFEE,
+		CHOCOLATE
+	}
+}

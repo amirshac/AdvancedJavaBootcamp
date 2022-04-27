@@ -1,0 +1,572 @@
+package javabootcamp.basic.methods;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class runner {
+
+	// takes 3 grades and returns average
+	public static float returnAverageGrade(int grade1, int grade2, int grade3)
+	{
+		int sum = grade1 + grade2 + grade3;
+		float average = (float)sum / 3;
+		
+		return average;
+	}
+	
+	public static int returnMax(int a, int b)
+	{
+		int max = (a > b) ? a : b;
+		return max;
+	}
+	
+	public static int returnMax(int a, int b, int c)
+	{
+		int max = 0;
+		max = (a > b) ? a : b;
+		max = (max > c) ? max : c;
+		return max;
+	}
+	
+	// EX 6.1  
+	public static int returnOneDigitUp(int number) {
+		int result = 0;
+		int digit = 0;
+		int digitPower = 1;
+		
+		while (number > 0) {
+			digit = number % 10;
+			digit = (digit+1) % 10; // Example: 9->10->0;
+			
+			result += (digit*digitPower);
+			digitPower *= 10;
+			
+			number /= 10;
+		}
+		return result;
+	}
+	
+	public static void execute61() {
+		final int TEST_NUM_1 = 128;
+		final int TEST_NUM_2 = 456;
+		
+		int result = constructMinDigitsNumber(TEST_NUM_1, TEST_NUM_2);
+		System.out.printf("%d %d -> %d%n", TEST_NUM_1, TEST_NUM_2, result);
+	}
+	
+	// EX 6.2
+	public static int lengthOfNumber(int number) {
+		int length = 0;
+		
+		while (number > 0) {
+			number /= 10;
+			length++;
+		}
+		
+		return length;
+	}
+	
+	public static int constructMinDigitsNumber(int number1, int number2) {
+		final int ERROR_CODE = -1;
+		int result=0;
+		int digit1=0, digit2=0;
+		int digitPower = 1;
+		int minDigit = 0;
+		
+		if (lengthOfNumber(number1) != lengthOfNumber(number2))
+			return ERROR_CODE;
+		
+		while (number1 > 0){
+			digit1 = number1%10;
+			digit2 = number2%10;
+			
+			minDigit = (digit1 < digit2) ? digit1 : digit2;
+			result += (minDigit*digitPower);
+			digitPower *= 10;
+			
+			number1/=10;
+			number2/=10;
+		}
+		
+		return result;
+	}
+	
+	// EX 6.3 - perfect number - equals to the sum of its dividers
+	
+	public static boolean isPerfectNumber(int num) {
+		boolean isPerfect = false;
+		int sum, divider;
+		
+		sum = 0;
+		divider = 1;
+		
+		for (divider = 1; divider < num; divider++) {
+			
+			if ( num % divider == 0) {					
+				sum += divider;
+
+			}
+						
+		}
+		
+		isPerfect = ( sum == num ) ? true : false;
+		
+		return isPerfect;
+	}
+	
+	public static void execute63() {
+
+		for (int i=1; i<=10000; i++){
+			
+			if (isPerfectNumber(i)) {
+				System.out.printf("%d is a percect number%n", i);
+			}
+		}
+		
+/* 6.3 run:
+6 is a percect number
+28 is a percect number
+496 is a percect number
+8128 is a percect number
+ */
+		
+	}
+	
+	// -------------------------------------------------------------------------------
+	
+	// EX 6.4 - sum of digits
+	public static int sumOfDigits(int number) {
+		int result = 0;
+		int digit = 0;
+		
+		if ( number < 0)
+			number *= -1;
+		
+		while (number > 0)
+		{
+			digit = number % 10;
+			result += digit;
+			
+			number /= 10;
+		}
+		
+		return result;
+	}
+	
+	public static int numberOfElementsWithSumOfDigits(int[] arr, int sum)
+	{
+		int result=0;
+		
+		for (int element : arr) {
+			if (sumOfDigits(element) == sum) result ++;
+		}
+		
+		return result;
+	}
+	
+	// --------------------------------------------------------------------------------
+	
+	// EX 6.5 - Print rhombus
+	public static void printLineOfChars(char chr, int size) {
+		for (int i=0; i<size; i++) {
+			System.out.print(chr);
+		}
+	}
+	
+	public static void printLineOfRhombus(char chr, int size, int line) {
+		printLineOfChars(chr, size-line);
+		printLineOfChars(' ', line*2);
+		printLineOfChars(chr, size-line);
+		System.out.println();
+	}
+	
+	public static void printRhombus(char chr, int size){
+		
+		for (int i=0; i<size; i++) {
+			printLineOfRhombus(chr, size, i);
+		}
+		
+		for (int j=size-2; j>=0; j--) {
+			printLineOfRhombus(chr, size, j);	
+		}
+		
+	}
+	
+	public static void execute65() {
+		printRhombus('#', 4);
+/*run:
+########
+###  ###
+##    ##
+#      #
+##    ##
+###  ###
+########
+ */
+	}
+	
+	// -------------------------------------------------------------------
+	
+	// EX 6.6 - Perfect Matrix - sum of row N equals to sum of col N
+	
+	public static int sumOfMatrixRow(int[][] matrix, int rowIndex) {
+		int sum = 0;
+		int len = matrix.length;
+		
+		for (int i=0; i<len; i++) {
+			sum += matrix[rowIndex][i];
+		}
+		
+		return sum;
+	}
+	
+	public static int sumOfMatrixCol(int[][] matrix, int colIndex) {
+		int sum = 0;
+		int len = matrix.length;
+		
+		for (int i=0; i<len; i++) {
+			sum += matrix[i][colIndex];
+		}
+		
+		return sum;
+	}
+	
+	public static boolean isPerfectMatrix(int[][] matrix) {
+		boolean isPerfect = true;
+		int len = matrix.length;
+		
+		for (int i=0; i<len; i++) {
+			
+			// DEBUG
+			//System.out.println("Row " + i + ":" + sumOfMatrixRow(matrix, i));
+			//System.out.println("Col " + i + ":" + sumOfMatrixCol(matrix, i));
+			
+			if (sumOfMatrixRow(matrix, i) != sumOfMatrixCol(matrix, i)) {
+				isPerfect = false;
+				break;
+			}
+		}
+		
+		return isPerfect;
+	}
+	
+	// EX 6.7 - mirror matrix
+	public static boolean isIdenticalCols(int[][] matrix, int col1, int col2) {
+		boolean result = true;
+		
+		for (int[] row : matrix){
+			if (row[col1] != row[col2]) {
+				result = false;
+				break;
+			}
+		}
+		return result;
+	}
+	
+	public static boolean isMirrorMatrix(int[][] matrix, int rows, int cols) {
+		boolean result = true;
+		int TARGET = cols/2;
+		int j = 0;
+		
+		for (int i=0; i<TARGET; i++) {
+			
+			j = cols-i-1;
+			
+			// DEBUG
+			//System.out.println("col " + i + "=col " + j);
+			//System.out.println(isIdenticalCols(matrix,i, j));
+			
+			if ( !isIdenticalCols(matrix, i, j)) {
+				result = false;
+				break;
+			}
+		}
+		return result;
+	}
+			
+	public static int[] createRandomArray(int size) {
+		int[] resultArr = new int[size];
+		
+		Random rnd = new Random();
+		int element = 0;
+		
+		for (int i=0; i<size-1; i++)
+		{
+			element = rnd.nextInt(201)-100;
+			
+			resultArr[i] = element;
+		}
+		
+		return resultArr;
+	}
+	
+	public static int[] createSumArray(int[] arr1, int[] arr2)
+	{
+		int[] resultArr;
+		int[] longerArr;
+		int[] shorterArr;
+		
+		if (arr1.length > arr2.length)
+		{
+			longerArr = arr1;
+			shorterArr = arr2;
+		}else {
+			longerArr = arr2;
+			shorterArr = arr1;
+		}
+		
+		resultArr = new int[longerArr.length];
+		
+		for (int i=0; i<shorterArr.length; i++){
+			resultArr[i] = shorterArr[i] + longerArr[i];
+		}
+		
+		// copy remaining of longer array
+		for (int i=shorterArr.length; i<longerArr.length; i++)
+		{
+			resultArr[i] = longerArr[i];
+		}
+		
+		return resultArr;
+	}
+	
+	public static void changeArrayToSumOfArrays(int[] arr1, int[] arr2)
+	{
+		int[] longerArr;
+		int[] shorterArr;
+		
+		if (arr1.length > arr2.length)
+		{
+			longerArr = arr1;
+			shorterArr = arr2;
+		}else {
+			longerArr = arr2;
+			shorterArr = arr1;
+		}
+		
+		longerArr = CreateSumArrays(arr1, arr2);
+	}
+	
+	// EX 6.8 - Array additions 
+	// Example: [1][9][3] + [7] = [2][0][0]
+	
+	public static void printArray(int[] arr)
+	{
+		for (int element : arr) {
+			System.out.print("[" + element + "] ");
+		}
+		System.out.println();
+	}
+	
+	public static int[] createArraySumTwoArrays(int[] arr1, int[] arr2) {
+		
+		int[] resultArray;
+		int digit1 = 0, digit2 = 0;
+		int sumDigits = 0;
+		int carry = 0;
+		
+		int[] longerArray, shorterArray;
+		
+		if (arr1.length >= arr2.length) {
+			longerArray = arr1;
+			shorterArray = arr2;
+		} else {
+			longerArray = arr2;
+			shorterArray = arr1;
+		}
+		
+		resultArray = new int[longerArray.length+1];
+		
+		int posLonger = longerArray.length-1;
+		int posShorter = shorterArray.length-1;
+		int posResult = resultArray.length-1;
+		
+		for (int i=0; i<resultArray.length; i++) {
+			digit1 = (posShorter>=0) ? shorterArray[posShorter] : 0;
+			digit2 = (posLonger>=0) ? longerArray[posLonger] : 0;
+			
+			sumDigits = digit1 + digit2 + carry;
+			
+			if (sumDigits >= 10) {
+				sumDigits %= 10;
+				carry = 1;
+			}else {
+				carry = 0;
+			}
+			
+			resultArray[posResult] = sumDigits;
+			
+			posLonger--;
+			posShorter--;
+			posResult--;
+		}
+		
+		return resultArray;
+	}
+	
+	public static int[] contactArr(int[] arr1, int[] arr2)
+	{
+		int[] resultArr = new int[arr1.length+arr2.length];
+		
+		int i = 0;
+		int j = 0;
+		
+		for (i=0; i<arr1.length; i++) {
+			resultArr[j] = arr1[i];
+			j++;
+		}
+		
+		for (i=0; i<arr2.length; i++) {
+			resultArr[j] = arr2[i];
+			j++;
+		}
+	}
+	
+	// EX 6.9 - max0Rectangle
+	public static int max0Rectangle (int[][] matrix) {
+		int sizeOfRec = 0;
+		int row = 0, col = 0;
+		boolean foundNonZero = false;
+		
+		for (row=0; row<matrix.length; row++) {
+					
+			for (col=0; col<matrix.length; col++) {
+			
+				if (matrix[row][col] != 0) {
+					foundNonZero = true;
+					break;
+				}					}
+			
+			if (foundNonZero) break;
+		}
+	
+		sizeOfRec = Math.max(row, col);
+		
+		return sizeOfRec;
+	}
+	
+	
+	public static void execute69()
+	{
+		int[][] matrix = { 
+				{ 1, 0, 0 },
+				{ 0, 0, 0 },
+				{ 0, 1, 0 }
+		};
+		
+		int result = max0Rectangle(matrix);
+		System.out.println(result);					
+	
+	}
+	
+//------------------------------------------------------------------------
+	
+	// EX 6.11
+	
+	public static void printArray(char[] arr) {
+		for (char ch : arr) {
+			System.out.printf(" %c |", ch);
+		}
+	}
+	
+	public static char[] generateMurble(int size) {
+		char[] murble = new char[2*size+1];
+		
+		for (int i=0; i<2*size; i+=2) {
+			murble[i]='0';
+			murble[i+1]='X';
+		}
+		
+		murble[2*size]=' ';
+		return murble;
+	}
+	
+	
+	public static int murbleFindSpace(char[] murble) {
+		for (int i=0; i<murble.length; i++) {
+			if (murble[i] == ' ') {
+				return i;
+			}
+		}
+		
+	}
+	
+	public static void execute611() {
+		char[] murble = generateMurble(3);
+		int spacePos = murbleFindSpace(murble);
+		
+		while (true) {
+			printArray(murble);
+			
+			// logic
+			if (murble[spacePos-1] == 'X') {
+				murble[spacePos] = 'X';
+				
+				spacePos--;
+				murble[spacePos] = ' ';
+				System.out.println("ShiftRight");
+			}
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+	
+		execute611();
+		// execute63();
+		// execute61();
+		// execute65();
+		// execute69();
+
+		// EX 6.4a
+		//int result = sumOfDigits(123);
+
+		// EX 6.4b
+		//int[] arr = {91, 820, 721, 23};
+		//int result = numberOfElementsWithSumOfDigits(arr, 10);
+		
+		
+		/*
+		// EX 6.6 - matrix
+		int [][]matrix = {
+				{2,1,5},
+				{6,7,3},
+				{0,8,0} 
+				};
+		
+		//boolean result = isPerfectMatrix(matrix);
+
+		 */
+		
+		/*
+		
+		// EX 6.7 - mirrorMatrix
+		int[][] matrix = {
+				{2, 2, 5, 2, 2},
+				{6, 7, 3, 7, 6},
+				{0, 8, 0, 8, 0}
+		};
+		
+		
+		boolean result = isMirrorMatrix(matrix, 3, 5);
+		System.out.println(result);
+		*/
+		
+		/*
+		// EX 6.8 - array of sum arrays
+		int[] arr1 = {9, 9, 9};
+		int[] arr2 = {9, 9, 9};
+		int[] sumArr;
+		sumArr = createArraySumTwoArrays(arr1, arr2);
+		
+		printArray(sumArr);
+		*/
+		
+		//-----------------------------
+		
+		
+		
+	}
+
+}

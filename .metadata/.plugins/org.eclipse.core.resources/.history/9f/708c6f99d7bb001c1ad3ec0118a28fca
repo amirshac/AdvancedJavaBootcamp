@@ -1,0 +1,12 @@
+package AirportRunner;
+import Airport.*;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Flight flight = new Flight(100, 60);
+		flight.depart();
+		System.out.println(flight);
+	}
+
+}

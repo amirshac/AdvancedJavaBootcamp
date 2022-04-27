@@ -1,0 +1,9 @@
+package VendingMachine.VendingMachine;
+
+public class Cola extends Soda {
+	
+	public Cola() {
+		this.name = "Cola";
+	}
+
+}

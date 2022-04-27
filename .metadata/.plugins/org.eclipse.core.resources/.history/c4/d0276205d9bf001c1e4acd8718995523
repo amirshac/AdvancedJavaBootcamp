@@ -1,0 +1,116 @@
+package javabootcamp.oopexam.DollToy;
+
+import java.time.LocalDate;
+import javabootcamp.oopexam.Playable.*;
+
+public abstract class Toy implements Playable{
+	private static int IDPool;
+	private int ID;
+	private String name;
+	private LocalDate purchaseDate;
+	private boolean isBroken;
+	private AgeGroup ageGroup;
+	private int toyAgeMonths;
+	
+	static {
+		IDPool = 0;
+	}
+	
+	// constructors
+	public Toy(String name, LocalDate purchaseDate, AgeGroup ageGroup) {
+		ID = ++IDPool;
+		this.name = name;
+		this.purchaseDate = purchaseDate;
+		this.ageGroup = ageGroup;
+		isBroken = false;
+		toyAgeMonths = 0;
+		checkAndSetToyAgeAccordingToDate(LocalDate.now());
+	}
+	
+	public Toy() {
+		this("GenericToy", LocalDate.now(), AgeGroup.ABC);
+	}
+	
+	/**
+	 * Checks todays date and set toy age accordingly
+	 * @param months
+	 */
+	public void checkAndSetToyAgeAccordingToDate(LocalDate date) {
+		// need implement
+	}
+	
+	@Override
+	public String toString() {
+		return "<Toy> [ID=" + ID + ", name=" + name + ", purchaseDate=" + purchaseDate + ", isBroken=" + isBroken + "]";
+	}
+	
+	@Override
+	public void Play() {
+		if (toyAgeMonths >= 12) {
+			System.out.println("Can't play, toy is older than a year");
+			return;
+		}
+		
+		System.out.println("Playing with " + this);
+	}
+
+	// setters / getters
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public LocalDate getPurchaseDate() {
+		return purchaseDate;
+	}
+
+	public void setPurchaseDate(LocalDate purchaseDate) {
+		this.purchaseDate = purchaseDate;
+	}
+
+	public boolean isBroken() {
+		return isBroken;
+	}
+
+	public void setBroken(boolean isBroken) {
+		this.isBroken = isBroken;
+	}
+
+	public AgeGroup getAgeGroup() {
+		return ageGroup;
+	}
+
+	public void setAgeGroup(AgeGroup ageGroup) {
+		this.ageGroup = ageGroup;
+	}
+
+	public int getToyAge() {
+		return toyAgeMonths;
+	}
+
+	public void setToyAge(int toyAge) {
+		this.toyAgeMonths = toyAge;
+	}
+	
+	
+}
+
+enum AgeGroup{
+	A,
+	B,
+	C,
+	AB,
+	BC,
+	ABC
+}

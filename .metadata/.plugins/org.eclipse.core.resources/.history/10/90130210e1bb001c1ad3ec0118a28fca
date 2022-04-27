@@ -1,0 +1,15 @@
+package AirportRunner;
+import Airport.*;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Flight flight = new Flight(100, 60);
+		flight.setEstimatedDeparture(2022, 04, 14, 17, 30);
+		System.out.println(flight);
+		flight.printFrequentFlyers();
+		Flyer flyer = new Flyer("Moshe", "Ivgi");
+		flight.addFlyer(flyer);
+	}
+
+}

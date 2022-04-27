@@ -1,0 +1,7 @@
+package javabootcamp.oopexam.DollToy;
+
+import javabootcamp.oopexam.Toy.Toy;
+
+public class DollToy extends Toy {
+
+}
