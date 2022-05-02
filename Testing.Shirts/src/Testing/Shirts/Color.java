@@ -54,7 +54,6 @@ public class Color {
 		this.green = setColor(green);;
 	}
 
-
 	public void setBlue(short blue) {
 		this.blue = setColor(blue);
 	}
@@ -75,8 +74,7 @@ public class Color {
 		String dominant = DOMINANT_RED;
 		short biggest = red;
 		
-		biggest = (red > green) ? red : green;
-		biggest = (blue > biggest) ? blue : biggest;
+		biggest = (short)Math.max(red, Math.max(blue, green));
 		
 		if (biggest == red)
 			return DOMINANT_RED;
