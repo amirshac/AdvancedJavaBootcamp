@@ -12,9 +12,9 @@ public class Color {
 	private static final short INDEX_GREEN = 1;
 	private static final short INDEX_BLUE = 2;
 	
-	private static final String DOMINANT_RED = "Red";
-	private static final String DOMINANT_GREEN = "Green";
-	private static final String DOMINANT_BLUE = "Blue";
+	protected static final String DOMINANT_RED = "Red";
+	protected static final String DOMINANT_GREEN = "Green";
+	protected static final String DOMINANT_BLUE = "Blue";
 	
 	protected short red;
 	protected short green;
@@ -38,15 +38,6 @@ public class Color {
 		
 		normalized = new float[COLOR_NUMBER];
 		calculateNormalized();
-	}
-
-	protected short setColor(short color) {
-		if (color > COLOR_MAX)
-			color = COLOR_MAX;
-		else if (color < COLOR_MIN)
-			color = COLOR_MIN;
-		
-		return color;
 	}
 	
 	public void setRed(short red) {
@@ -90,6 +81,17 @@ public class Color {
 			return DOMINANT_GREEN;
 		
 		return dominant;
+	}
+	
+	/**
+	 * Checks if RGB values are equal with another color
+	 * @param otherColor
+	 * @return true if equal, false if not equal
+	 */
+	public boolean equals(Color otherColor) {
+		boolean result;
+		result = ((this.red == otherColor.red) && (this.green == otherColor.green) && (this.blue == otherColor.blue));  
+		return result;
 	}
 	
 	@Override

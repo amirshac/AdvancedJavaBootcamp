@@ -63,11 +63,11 @@ public class Design {
 
 	
 	public void setWidth(double width) {
-		this.width = setValueWithinBounds(width, MIN_WIDTH, MAX_WIDTH);
+		width = Utils.setDoubleInRange(width, MIN_WIDTH, MAX_WIDTH);
 	}
 
 	public void setHeight(double height) {
-		this.height = setValueWithinBounds(height, MIN_HEIGHT, MAX_HEIGHT);
+		height = Utils.setDoubleInRange(height, MIN_HEIGHT, MAX_HEIGHT);
 	}
 
 
@@ -80,13 +80,13 @@ public class Design {
 		this.color = color;
 	}
 	
-	public void setColor(short red, short green, short blue) {
+	public void setColor(int red, int green, int blue) {
 		this.color = new Color(red, green, blue);
 	}
 
 
 	public void setComplexity(double complexity) {
-		this.complexity = setValueWithinBounds(complexity, MIN_COMPLEXITY, MAX_COMPLEXITY);
+		this.complexity = Utils.setDoubleInRange(complexity, MIN_COMPLEXITY, MAX_COMPLEXITY);
 	}
 	
 	
