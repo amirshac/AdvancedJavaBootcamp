@@ -26,6 +26,10 @@ public class Color {
 		this(COLOR_DEFAULT, COLOR_DEFAULT, COLOR_DEFAULT);
 	}
 	
+	public Color(int red, int green, int blue) {
+		this( (short)red, (short)green, (short)blue );
+	}
+	
 	public Color(short red, short green, short blue) {
 		super();
 		setRed(red);
@@ -46,16 +50,16 @@ public class Color {
 	}
 	
 	public void setRed(short red) {
-		this.red = setColor(red);
+		this.red = Utils.setShortInRange(red, COLOR_MIN, COLOR_MAX);
 	}
 
 
 	public void setGreen(short green) {
-		this.green = setColor(green);;
+		this.green = Utils.setShortInRange(green, COLOR_MIN, COLOR_MAX);
 	}
 
 	public void setBlue(short blue) {
-		this.blue = setColor(blue);
+		this.blue = Utils.setShortInRange(blue, COLOR_MIN, COLOR_MAX);
 	}
 
 	
@@ -74,7 +78,7 @@ public class Color {
 		String dominant = DOMINANT_RED;
 		short biggest = red;
 		
-		biggest = (short)Math.max(red, Math.max(blue, green));
+		biggest = (short) Math.max(red, Math.max(blue, green));
 		
 		if (biggest == red)
 			return DOMINANT_RED;
