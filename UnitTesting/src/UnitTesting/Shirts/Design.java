@@ -1,4 +1,4 @@
-package Testing.Shirts;
+package UnitTesting.Shirts;
 
 public class Design {
 	private static final double MIN_WIDTH = 20;

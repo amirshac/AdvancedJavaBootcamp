@@ -1,6 +1,6 @@
-package Testing.Shirts;
+package UnitTesting.Shirts;
 
-import Testing.Shirts.Shirt.SIZE;
+import UnitTesting.Shirts.Shirt.SIZE;
 
 public class Runner {
 

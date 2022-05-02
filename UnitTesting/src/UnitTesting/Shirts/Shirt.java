@@ -1,4 +1,4 @@
-package Testing.Shirts;
+package UnitTesting.Shirts;
 
 public class Shirt {
 	

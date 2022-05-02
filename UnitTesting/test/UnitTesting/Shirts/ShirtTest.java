@@ -1,4 +1,4 @@
-package Testing.Shirts;
+package UnitTesting.Shirts;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-import Testing.Shirts.Shirt.SIZE;
+import UnitTesting.Shirts.Shirt;
+import UnitTesting.Shirts.Shirt.SIZE;
 
 @TestInstance(Lifecycle.PER_CLASS)
 
