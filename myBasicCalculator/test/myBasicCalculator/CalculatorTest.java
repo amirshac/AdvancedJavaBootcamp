@@ -39,7 +39,7 @@ class CalculatorTest {
 	
 	@Test
 	void checkDivision() {
-		calculator.divide(20,30);
+		
 	}
 
 }
