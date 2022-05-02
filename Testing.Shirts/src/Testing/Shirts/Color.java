@@ -1,4 +1,4 @@
-package CustomeTshirts;
+package Testing.Shirts;
 
 import java.util.Arrays;
 

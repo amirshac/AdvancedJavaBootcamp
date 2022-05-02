@@ -1,6 +1,6 @@
-package CustomeTshirts;
+package Testing.Shirts;
 
-public class Tshirt {
+public class Shirt {
 	
 	private static SIZE DEF_SIZE = SIZE.L;
 	private static double MIN_DEMAND = 0.1;
@@ -17,11 +17,11 @@ public class Tshirt {
 	protected double finalPrice;
 	
 	
-	public Tshirt() {
+	public Shirt() {
 		this(DEF_PRICE, DEF_DEMAND, DEF_SIZE, new Design());
 	}
 	
-	public Tshirt(double basePrice, double demandFactor, SIZE size, Design design) {
+	public Shirt(double basePrice, double demandFactor, SIZE size, Design design) {
 		super();
 		this.basePrice = basePrice;
 		this.demandFactor = demandFactor;

@@ -1,4 +1,4 @@
-package CustomeTshirts;
+package Testing.Shirts;
 
 public class Design {
 	private static final double MIN_WIDTH = 20;
