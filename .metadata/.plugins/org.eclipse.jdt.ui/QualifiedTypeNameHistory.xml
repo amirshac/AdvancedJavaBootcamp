@@ -48,4 +48,9 @@
     <fullyQualifiedTypeName name="ajbc.files.object_reader_writer.ObjectReaderWriter"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="CustomeTshirts.Color"/>
+    <fullyQualifiedTypeName name="CustomeTshirts.Design"/>
+    <fullyQualifiedTypeName name="CustomeTshirts.Tshirt"/>
+    <fullyQualifiedTypeName name="myBasicCalculator.Calculator.Operation"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 </qualifiedTypeNameHistroy>
