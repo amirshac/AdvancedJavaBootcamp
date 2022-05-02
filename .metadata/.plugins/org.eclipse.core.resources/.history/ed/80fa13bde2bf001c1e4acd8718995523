@@ -1,7 +1,0 @@
-package javabootcamp.oopexam.ElectricToy;
-
-import javabootcamp.oopexam.Toy.*;
-
-public class ElectricToy extends Toy{
-
-}

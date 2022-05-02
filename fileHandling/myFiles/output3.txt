@@ -1,0 +1,2 @@
+This is the data I want to write again.
+ age = 33 and money = 1233.45

@@ -1,9 +1,0 @@
-package Library.Runner;
-
-public class Library {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

@@ -1,7 +1,0 @@
-package VendingMachine.VendingMachine;
-
-public class Cola extends ColdDrink{
-	public Cola() {
-		super("Cola");
-	}
-}

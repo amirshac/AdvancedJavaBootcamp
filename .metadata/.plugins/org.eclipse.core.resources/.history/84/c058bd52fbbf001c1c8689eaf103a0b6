@@ -1,5 +1,0 @@
-package javabootcamp.oopexam.Toy;
-
-public enum AgeGroup {
-
-}
