@@ -19,7 +19,7 @@ public class Design {
 	protected double complexity;
 	protected Color color;
 	
-	private double area;
+	protected double area;
 
 	public Design(double width, double height, String slogan, double complexity, Color color) {
 		super();
@@ -50,24 +50,15 @@ public class Design {
 		area = width*height;
 		return area;
 	}
-	
-	protected double setValueWithinBounds(double value, double min, double max) {
-		double result = value;
-		if (result > max)
-			result = max;
-		else if (result < min)
-			result = min;
 		
-		return result;
-	}
-
-	
 	public void setWidth(double width) {
-		width = Utils.setDoubleInRange(width, MIN_WIDTH, MAX_WIDTH);
+		this.width = Utils.setDoubleInRange(width, MIN_WIDTH, MAX_WIDTH);
+		calculateArea();
 	}
 
 	public void setHeight(double height) {
-		height = Utils.setDoubleInRange(height, MIN_HEIGHT, MAX_HEIGHT);
+		this.height = Utils.setDoubleInRange(height, MIN_HEIGHT, MAX_HEIGHT);
+		calculateArea();
 	}
 
 
@@ -84,10 +75,8 @@ public class Design {
 		this.color = new Color(red, green, blue);
 	}
 
-
 	public void setComplexity(double complexity) {
 		this.complexity = Utils.setDoubleInRange(complexity, MIN_COMPLEXITY, MAX_COMPLEXITY);
 	}
-	
 	
 }

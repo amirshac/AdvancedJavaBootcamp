@@ -31,12 +31,12 @@ public class Shirt {
 	}
 	
 	public void setBasePrice(double basePrice) {
-		this.basePrice = setValueWithinBounds(basePrice, MIN_PRICE, Double.MAX_VALUE);
+		this.basePrice = Utils.setDoubleInRange(basePrice, MIN_PRICE, Double.MAX_VALUE);
 		finalPrice = calculateFinalPrice();
 	}
 
 	public void setDemandFactor(double demandFactor) {
-		this.demandFactor = setValueWithinBounds(demandFactor, MIN_DEMAND, MAX_DEMAND);
+		this.demandFactor = Utils.setDoubleInRange(demandFactor, MIN_DEMAND, MAX_DEMAND);
 		finalPrice = calculateFinalPrice();
 	}
 
@@ -48,15 +48,6 @@ public class Shirt {
 		this.design = design;
 	}
 
-	protected double setValueWithinBounds(double value, double min, double max) {
-		double result = value;
-		if (result > max)
-			result = max;
-		else if (result < min)
-			result = min;
-		
-		return result;
-	}
 	
 	protected double calculateFinalPrice() {
 		double result = (basePrice + design.complexity) * design.calculateArea() / demandFactor;
