@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="javabootcamp.oop.exercise.HomeAppliance"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode"/>
     <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode.Status"/>
-    <fullyQualifiedTypeName name="javax.net.ssl.SSLEngineResult.Status"/>
     <fullyQualifiedTypeName name="java.time.LocalTime"/>
     <fullyQualifiedTypeName name="VendingMachine.VendingMachine.Produceable"/>
     <fullyQualifiedTypeName name="VendingMachine.exeRunner.VendingMachine"/>
@@ -53,4 +51,11 @@
     <fullyQualifiedTypeName name="CustomeTshirts.Tshirt"/>
     <fullyQualifiedTypeName name="myBasicCalculator.Calculator.Operation"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.TestInstance.Lifecycle"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.TestInstance"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="Testing.Shirts.Shirt.SIZE"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.SSLEngineResult.Status"/>
+    <fullyQualifiedTypeName name="javabootcamp.oop.enumeration.StatusCode.Status"/>
 </qualifiedTypeNameHistroy>
