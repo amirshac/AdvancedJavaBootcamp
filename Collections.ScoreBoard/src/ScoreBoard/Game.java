@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import Utils.Utils;
 
 public class Game {
 	ArrayList<Player> playerList;
@@ -26,22 +25,17 @@ public class Game {
 	public void populatePlayers() {
 		Player player;
 		
-		player = new Player("Amir Amano", "Albania", 100, 100);
-		player.randomizeStats();
+		player = new Player("Amir Amano", "Denmark", 100, 100);
 		playerList.add(player);
 		
-		player = new Player("Benny Boots", "Bahamas", 100, 300);
-		player.randomizeStats();
+		player = new Player("Benny Boots", "Canada", 200, 200);
 		playerList.add(player);
 		
-		player = new Player("Catty Crops", "Canada", 351, 200);
-		player.randomizeStats();
+		player = new Player("Catty Crops", "Bahamas", 300, 300);
 		playerList.add(player);
 		
-		player = new Player("Doron Donatelo", "Denmark", 0, 341);
-		player.randomizeStats();
-		playerList.add(player);
-		
+		player = new Player("Doron Donatelo", "Albania", 400, 400);
+		playerList.add(player);		
 	}
 	
 	public void populateRandomPlayers(int number) {
@@ -56,27 +50,37 @@ public class Game {
 	
 	public void test() {
 		
-		populateRandomPlayers(40);
-
-		//updateScoreBoard();
-		//System.out.println("Scoreboard");
-		//scoreBoard.printTop(10);
-		//scoreBoard.printAll();
+		Player player = null;
 		
+		//populateRandomPlayers(40);
+		populatePlayers();
+
+		updateScoreBoard();
+		System.out.println("Scoreboard");
+		scoreBoard.printTop(10);
+		System.out.println("-----------");
+		
+		player = playerList.get(0);
+		player.setScore(500);
+		updateScoreBoard();
+		scoreBoard.printAll();
+
+//
 //		System.out.println("list by name:");
-//		generatePlayerListByName();
+//		generateListByName();
 //		Utils.printElements(listByName);
-		
+//		System.out.println("-----------");
+//		
 //		System.out.println("List by country:");
-//		generatePlayerListByCountry();
+//		generateListByCountry();
 //		Utils.printElements(listByCountry);
-		
-		System.out.println("List by rank:");
-		generatePlayerListByRank();
-		Utils.printElements(listByRank);
+//		System.out.println("-----------");
+//		
+//		System.out.println("List by rank:");
+//		generateListByRank();
+//		Utils.printElements(listByRank);
+//		System.out.println("-----------");
 	}
-	
-
 	
 	public void printPlayers() {
 		for (Player entry : playerList) {
@@ -88,7 +92,7 @@ public class Game {
 		scoreBoard.update();
 	}
 	
-	public ArrayList<Player> generatePlayerListByName() {
+	public void generateListByName() {
 		
 		Comparator<Player> playerNameComparator = new Comparator<Player>(){
 			@Override
@@ -97,14 +101,13 @@ public class Game {
 			}
 		};
 		
-		ArrayList<Player> listByName = new ArrayList<Player>(this.playerList);
+		listByName = new ArrayList<Player>(this.playerList);
 		Collections.sort(listByName, playerNameComparator);
 		
 		this.listByName = new ArrayList<Player>(listByName);
-		return listByName;
 	}
 	
-	public ArrayList<Player> generatePlayerListByCountry() {
+	public void generateListByCountry() {
 		Comparator<Player> playerCountryComparator = new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
@@ -112,14 +115,11 @@ public class Game {
 			}
 		};
 		
-		ArrayList<Player> listByCountry = new ArrayList<Player>(this.playerList);
+		listByCountry = new ArrayList<Player>(this.playerList);
 		Collections.sort(listByCountry, playerCountryComparator);
-		
-		this.listByCountry = new ArrayList<Player>(listByCountry);
-		return listByCountry;
 	}
 	
-	public ArrayList<Player> generatePlayerListByRank() {	
+	public void generateListByRank() {	
 		Comparator<Player> playerRankComparator = new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
@@ -127,11 +127,8 @@ public class Game {
 			}
 		};
 		
-		ArrayList<Player> listByRank = new ArrayList<Player>(this.playerList);
+		listByRank = new ArrayList<Player>(this.playerList);
 		Collections.sort(listByRank, playerRankComparator);
-		
-		this.listByRank = new ArrayList<Player>(listByRank);
-		return listByRank;	
 	}
 	
 }
