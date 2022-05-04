@@ -13,7 +13,9 @@ public class Game {
 	}
 	
 	protected void test() {
-		tollRoad.printCheckPoints();
+		for (int i=0; i<5; i++) {
+			tollRoad.run();	
+		}
 	}
 
 }
