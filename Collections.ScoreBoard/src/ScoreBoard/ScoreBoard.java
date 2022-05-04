@@ -21,16 +21,13 @@ public class ScoreBoard {
 		this.game = game;
 	}
 	
-	public void print() {
-		Player player;
-		while(!scoreBoardPlayers.isEmpty()) {
-			player = scoreBoardPlayers.remove();
-			System.out.println(player);
-		}
+	public void printAll() {
+		printTop(scoreBoardPlayers.size());
 	}
 	
 	public void printTop(int num) {
 		Player player = null;
+		
 		for (int i=0; i<num; i++) {
 			
 			if (scoreBoardPlayers.isEmpty()) {
@@ -38,7 +35,7 @@ public class ScoreBoard {
 			}
 			
 			player = scoreBoardPlayers.remove();
-			System.out.println(player);
+			System.out.println(i+1 + " " + player);
 		}
 	}
 	

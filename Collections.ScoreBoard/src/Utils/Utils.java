@@ -14,10 +14,12 @@ public class Utils {
 	public static int getRandomInt(int min) {
 		return random.nextInt(min, Integer.MAX_VALUE);
 	}
-	
-	public static void printCollectionElements(Collection collection) {
+		
+	public static void printElements(Collection collection) {
+		int i = 1;
 		for (Object object : collection) {
-			System.out.println(object);
+			System.out.println(i + " " + object);
+			i++;
 		}
 	}
 	

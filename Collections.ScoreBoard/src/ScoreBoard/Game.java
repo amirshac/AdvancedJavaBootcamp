@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import Utils.Utils;
+
 public class Game {
 	ArrayList<Player> playerList;
 	ScoreBoard scoreBoard;
@@ -52,6 +54,30 @@ public class Game {
 		}
 	}
 	
+	public void test() {
+		
+		populateRandomPlayers(40);
+
+		//updateScoreBoard();
+		//System.out.println("Scoreboard");
+		//scoreBoard.printTop(10);
+		//scoreBoard.printAll();
+		
+//		System.out.println("list by name:");
+//		generatePlayerListByName();
+//		Utils.printElements(listByName);
+		
+//		System.out.println("List by country:");
+//		generatePlayerListByCountry();
+//		Utils.printElements(listByCountry);
+		
+		System.out.println("List by rank:");
+		generatePlayerListByRank();
+		Utils.printElements(listByRank);
+	}
+	
+
+	
 	public void printPlayers() {
 		for (Player entry : playerList) {
 			System.out.println(entry);	
@@ -67,7 +93,7 @@ public class Game {
 		Comparator<Player> playerNameComparator = new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
-				return p1.getName().compareTo(p1.getName());
+				return p1.getName().compareTo(p2.getName());
 			}
 		};
 		
@@ -82,14 +108,14 @@ public class Game {
 		Comparator<Player> playerCountryComparator = new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
-				return p1.getCountry().compareTo(p1.getCountry());
+				return p1.getCountry().compareTo(p2.getCountry());
 			}
 		};
 		
 		ArrayList<Player> listByCountry = new ArrayList<Player>(this.playerList);
 		Collections.sort(listByCountry, playerCountryComparator);
 		
-		this.listByRank = new ArrayList<Player>(listByCountry);
+		this.listByCountry = new ArrayList<Player>(listByCountry);
 		return listByCountry;
 	}
 	
@@ -97,7 +123,7 @@ public class Game {
 		Comparator<Player> playerRankComparator = new Comparator<Player>(){
 			@Override
 			public int compare(Player p1, Player p2) {
-				return p1.getRank() - p2.getRank();
+				return p2.getRank() - p1.getRank();
 			}
 		};
 		
