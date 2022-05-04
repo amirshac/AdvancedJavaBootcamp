@@ -8,4 +8,8 @@ public class ScoreBoard {
 	public ScoreBoard() {
 		topPlayers = new PriorityQueue<Player>();
 	}
+	
+	public void print() {
+		System.out.println(topPlayers);
+	}
 }

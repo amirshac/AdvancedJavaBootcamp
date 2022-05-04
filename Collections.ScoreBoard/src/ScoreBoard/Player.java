@@ -1,6 +1,8 @@
 package ScoreBoard;
 
-public class Player {
+import java.util.Objects;
+
+public class Player implements Comparable<Player>{
 	protected static double idCounter;
 	private static final double DEF_SCORE = 0;
 	private static final double DEF_RANK = 0;
@@ -71,6 +73,28 @@ public class Player {
 
 	public void setRank(double rank) {
 		this.rank = rank;
+	}
+
+	@Override
+	public int compareTo(Player otherPlayer) {
+		return (int)(this.id - otherPlayer.id);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Player other = (Player) obj;
+		return Double.doubleToLongBits(id) == Double.doubleToLongBits(other.id);
 	}
 
 	
