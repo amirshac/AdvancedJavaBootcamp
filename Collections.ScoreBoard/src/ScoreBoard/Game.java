@@ -1,17 +1,18 @@
 package ScoreBoard;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Game {
-	//HashMap<Integer, Player> players;
 	ArrayList<Player> playerList;
 	ScoreBoard scoreBoard;
 	
+	ArrayList<Player> listByRank;
+	ArrayList<Player> listByCountry;
+	ArrayList<Player> listByName;
+	
 	public Game() {
-		//players = new HashMap<Integer, Player>();
 		playerList = new ArrayList<Player>();
 		scoreBoard = new ScoreBoard(this);
 	}
@@ -39,37 +40,16 @@ public class Game {
 		player.randomizeStats();
 		playerList.add(player);
 		
-		player = new Player("Eran Ekstein");
-		player.randomizeStats();
-		playerList.add(player);
+	}
+	
+	public void populateRandomPlayers(int number) {
+		Player player;
 		
-		player = new Player("Freddy Fokstein");
-		player.randomizeStats();
-		playerList.add(player);
-		
-		player = new Player("Gerald Ginsburg");
-		player.randomizeStats();
-		playerList.add(player);
-		
-		player = new Player("Harry Houdini");
-		player.randomizeStats();
-		playerList.add(player);
-
-		player = new Player("Igor Ivgeny");
-		player.randomizeStats();
-		playerList.add(player);
-		
-		player = new Player("Jacky Jackal");
-		player.randomizeStats();
-		playerList.add(player);
-		
-		player = new Player("Katty Kombs");
-		player.randomizeStats();
-		playerList.add(player);
-		
-		player = new Player("Lenny Lenard");
-		player.randomizeStats();
-		playerList.add(player);
+		for (int i=0; i<number; i++) {
+			player = new Player();
+			player.RandomizeAll();
+			playerList.add(player);
+		}
 	}
 	
 	public void printPlayers() {
@@ -80,6 +60,52 @@ public class Game {
 	
 	public void updateScoreBoard() {
 		scoreBoard.update();
+	}
+	
+	public ArrayList<Player> generatePlayerListByName() {
+		
+		Comparator<Player> playerNameComparator = new Comparator<Player>(){
+			@Override
+			public int compare(Player p1, Player p2) {
+				return p1.getName().compareTo(p1.getName());
+			}
+		};
+		
+		ArrayList<Player> listByName = new ArrayList<Player>(this.playerList);
+		Collections.sort(listByName, playerNameComparator);
+		
+		this.listByName = new ArrayList<Player>(listByName);
+		return listByName;
+	}
+	
+	public ArrayList<Player> generatePlayerListByCountry() {
+		Comparator<Player> playerCountryComparator = new Comparator<Player>(){
+			@Override
+			public int compare(Player p1, Player p2) {
+				return p1.getCountry().compareTo(p1.getCountry());
+			}
+		};
+		
+		ArrayList<Player> listByCountry = new ArrayList<Player>(this.playerList);
+		Collections.sort(listByCountry, playerCountryComparator);
+		
+		this.listByRank = new ArrayList<Player>(listByCountry);
+		return listByCountry;
+	}
+	
+	public ArrayList<Player> generatePlayerListByRank() {	
+		Comparator<Player> playerRankComparator = new Comparator<Player>(){
+			@Override
+			public int compare(Player p1, Player p2) {
+				return p1.getRank() - p2.getRank();
+			}
+		};
+		
+		ArrayList<Player> listByRank = new ArrayList<Player>(this.playerList);
+		Collections.sort(listByRank, playerRankComparator);
+		
+		this.listByRank = new ArrayList<Player>(listByRank);
+		return listByRank;	
 	}
 	
 }

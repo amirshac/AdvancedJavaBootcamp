@@ -19,7 +19,6 @@ INDEX VERSION 1.131+C:\Users\amirs\eclipse-AdvancedJavaBootcamp\.metadata\.plugi
 2777142040.index
 1849607918.index
 976658976.index
-717945827.index
 2987283119.index
 1423397425.index
 2564286119.index

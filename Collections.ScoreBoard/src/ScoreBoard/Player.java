@@ -2,11 +2,15 @@ package ScoreBoard;
 
 import java.util.Objects;
 
+import Utils.Utils;
+import Utils.StringGenerator;
+
 public class Player implements Comparable<Player>{
 	protected static int idCounter;
 	private static final int DEF_SCORE = 0;
 	private static final int DEF_RANK = 0;
 	private static final String DEF_COUNTRY = "United States";
+	private static final String DEF_NAME = "John Doe";
 	
 	static {
 		idCounter = 0;
@@ -20,6 +24,7 @@ public class Player implements Comparable<Player>{
 	
 	
 	// Constructors
+	
 	public Player(String name, String country, int score, int rank) {
 		super();
 		this.name = name;
@@ -35,6 +40,10 @@ public class Player implements Comparable<Player>{
 	
 	public Player(String name) {
 		this(name, DEF_COUNTRY, DEF_SCORE, DEF_RANK);
+	}
+	
+	public Player() {
+		this(DEF_NAME, DEF_COUNTRY, DEF_SCORE, DEF_RANK);
 	}
 
 	@Override
@@ -67,7 +76,7 @@ public class Player implements Comparable<Player>{
 		this.score = score;
 	}
 
-	public double getRank() {
+	public int getRank() {
 		return rank;
 	}
 
@@ -96,9 +105,33 @@ public class Player implements Comparable<Player>{
 		Player other = (Player) obj;
 		return Double.doubleToLongBits(id) == Double.doubleToLongBits(other.id);	}
 
+
+	public void RandomizeAll() {
+		randomizeName();
+		randomizeCountry();
+		randomizeScore();
+		randomizeRank();
+	}
 	
 	public void randomizeStats() {
-		this.score = Utils.getRandomInt(0, 1000);
-		this.rank = Utils.getRandomInt(0, 1000);
+		randomizeScore();
+		randomizeRank();	
 	}
+	
+	public void randomizeName() {
+		setName(StringGenerator.fullName());
+	}
+	
+	public void randomizeCountry() {
+		setCountry(StringGenerator.country());
+	}
+	
+	public void randomizeScore() {
+		setScore(Utils.getRandomInt(0, 1000));
+	}
+	
+	public void randomizeRank() {
+		setRank(Utils.getRandomInt(0, 1000));
+	}
+
 }

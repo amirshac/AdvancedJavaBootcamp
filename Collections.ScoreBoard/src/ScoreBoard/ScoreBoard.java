@@ -22,7 +22,9 @@ public class ScoreBoard {
 	}
 	
 	public void print() {
-		for (Player player : scoreBoardPlayers) {
+		Player player;
+		while(!scoreBoardPlayers.isEmpty()) {
+			player = scoreBoardPlayers.remove();
 			System.out.println(player);
 		}
 	}
