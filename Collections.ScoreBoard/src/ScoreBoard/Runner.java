@@ -7,7 +7,10 @@ public class Runner {
 		game.populatePlayers();
 		
 		game.updateScoreBoard();
-		game.scoreBoard.print();		
+		game.scoreBoard.printTop(30);
+		
+		System.out.println("------------");
+		game.scoreBoard.print();
 	}
 
 }

@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Player implements Comparable<Player>{
 	protected static int idCounter;
-	private static final double DEF_SCORE = 0;
-	private static final double DEF_RANK = 0;
+	private static final int DEF_SCORE = 0;
+	private static final int DEF_RANK = 0;
 	private static final String DEF_COUNTRY = "United States";
 	
 	static {
@@ -15,12 +15,12 @@ public class Player implements Comparable<Player>{
 	protected int id;
 	protected String name;
 	protected String country;
-	protected double score;
-	protected double rank;
+	protected int score;
+	protected int rank;
 	
 	
 	// Constructors
-	public Player(String name, String country, double score, double rank) {
+	public Player(String name, String country, int score, int rank) {
 		super();
 		this.name = name;
 		this.country = country;
@@ -63,7 +63,7 @@ public class Player implements Comparable<Player>{
 		return score;
 	}
 
-	public void setScore(double score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 
@@ -71,7 +71,7 @@ public class Player implements Comparable<Player>{
 		return rank;
 	}
 
-	public void setRank(double rank) {
+	public void setRank(int rank) {
 		this.rank = rank;
 	}
 
@@ -97,4 +97,8 @@ public class Player implements Comparable<Player>{
 		return Double.doubleToLongBits(id) == Double.doubleToLongBits(other.id);	}
 
 	
+	public void randomizeStats() {
+		this.score = Utils.getRandomInt(0, 1000);
+		this.rank = Utils.getRandomInt(0, 1000);
+	}
 }

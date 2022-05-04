@@ -27,6 +27,19 @@ public class ScoreBoard {
 		}
 	}
 	
+	public void printTop(int num) {
+		Player player = null;
+		for (int i=0; i<num; i++) {
+			
+			if (scoreBoardPlayers.isEmpty()) {
+				break;
+			}
+			
+			player = scoreBoardPlayers.remove();
+			System.out.println(player);
+		}
+	}
+	
 	public void update() {
 		if (game == null) {
 			System.out.println("no game exception");
