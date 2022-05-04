@@ -3,7 +3,7 @@ package ScoreBoard;
 import java.util.Objects;
 
 public class Player implements Comparable<Player>{
-	protected static double idCounter;
+	protected static int idCounter;
 	private static final double DEF_SCORE = 0;
 	private static final double DEF_RANK = 0;
 	private static final String DEF_COUNTRY = "United States";
@@ -12,7 +12,7 @@ public class Player implements Comparable<Player>{
 		idCounter = 0;
 	}
 	
-	protected double id;
+	protected int id;
 	protected String name;
 	protected String country;
 	protected double score;
@@ -94,8 +94,7 @@ public class Player implements Comparable<Player>{
 		if (getClass() != obj.getClass())
 			return false;
 		Player other = (Player) obj;
-		return Double.doubleToLongBits(id) == Double.doubleToLongBits(other.id);
-	}
+		return Double.doubleToLongBits(id) == Double.doubleToLongBits(other.id);	}
 
 	
 }

@@ -3,7 +3,7 @@ package bootcamp.collections.examples;
 import java.util.Objects;
 
 public class Employee  implements Comparable<Employee> {
-    private Integer  id;
+    private Integer id;
     private String name;
     private String city;
 
