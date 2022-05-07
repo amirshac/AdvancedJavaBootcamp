@@ -11,8 +11,10 @@ public class Runner {
 		
 		GeneratorUtil.init();
 		System.out.println(GeneratorUtil.randomName());
+		System.out.println(GeneratorUtil.randomFullName());
 		System.out.println(GeneratorUtil.randomStreet());
 		System.out.println(GeneratorUtil.randomCountry());
+		System.out.println(GeneratorUtil.randomDateString());
 	}
 
 }
