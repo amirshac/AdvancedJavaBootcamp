@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode"/>
-    <fullyQualifiedTypeName name="javabootcamp.oop.exerciseRunner.StatusCode.Status"/>
-    <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.Produceable"/>
-    <fullyQualifiedTypeName name="VendingMachine.exeRunner.VendingMachine"/>
-    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.ColdDrink"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="VendingMachine.VendingMachine.HotDrink.HotDrinkType"/>
-    <fullyQualifiedTypeName name="Library.ReadableBook"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="Airport.Flight"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.Playable.Playable"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.Toy.Toy"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.Kid.Kid"/>
@@ -23,14 +12,12 @@
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.Reader"/>
     <fullyQualifiedTypeName name="java.io.Writer"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="ajbc.files.stream_reader_writer.StreamReaderWriter"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
     <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
     <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.BufferReaderWriter"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.PrintWriterDemo"/>
     <fullyQualifiedTypeName name="ajbc.files.print_writer.FileExercise"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -54,10 +41,23 @@
     <fullyQualifiedTypeName name="Testing.Shirts.Shirt.SIZE"/>
     <fullyQualifiedTypeName name="javax.net.ssl.SSLEngineResult.Status"/>
     <fullyQualifiedTypeName name="javabootcamp.oop.enumeration.StatusCode.Status"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.ListIterator"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="ScoreBoard.Game"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="Utils.stringGenerator"/>
+    <fullyQualifiedTypeName name="Utils.Utils"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
 </qualifiedTypeNameHistroy>

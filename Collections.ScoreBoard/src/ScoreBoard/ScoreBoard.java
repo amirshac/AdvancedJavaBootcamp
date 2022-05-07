@@ -19,6 +19,7 @@ public class ScoreBoard {
 	
 	public void setGame(Game game) {
 		this.game = game;
+		update();
 	}
 	
 	public void printAll() {
@@ -27,6 +28,7 @@ public class ScoreBoard {
 	
 	public void printTop(int num) {
 		Player player = null;
+		
 		
 		for (int i=0; i<num; i++) {
 			
@@ -39,6 +41,9 @@ public class ScoreBoard {
 		}
 	}
 	
+	/**
+	 * Updates scorecoard from game player data and sorts it by score
+	 */
 	public void update() {
 		if (game == null) {
 			System.out.println("no game exception");
