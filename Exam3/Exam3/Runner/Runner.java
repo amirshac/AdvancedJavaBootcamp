@@ -7,6 +7,7 @@ import DragonDinner.Food;
 import DragonDinner.ObjectReaderWriter;
 import DragonDinner.Food.Macro;
 import DragonDinner.Food.Taste;
+import DragonDinner.NonCapitalizedException;
 
 public class Runner {
 	
@@ -30,6 +31,22 @@ public class Runner {
 		ObjectReaderWriter.saveRandomObjectsToFile(objArr, numObjectsToSave);
 		
 		ObjectReaderWriter.printObjectsFromFile();
+		
+		try {
+			food1.setName("hotdog");
+		} catch (NonCapitalizedException e) {
+			System.out.println(e);
+		}
+		
+		try {
+			food1.setName("Hotdog");
+		} catch (NonCapitalizedException e) {
+			System.out.println(e);
+		}
+		
+		// too young exception
+		dragon1.setBirthDate(LocalDate.of(888, 8, 7));
+		
 	}
 
 }

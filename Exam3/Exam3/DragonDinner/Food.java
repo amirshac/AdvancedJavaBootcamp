@@ -13,7 +13,11 @@ public class Food implements Serializable {
 	protected Macro macro;
 	
 	public Food(String name, Taste taste, Macro macro) {
-		setName(name);
+		try {
+			setName(name);
+		} catch (NonCapitalizedException e) {
+			System.out.println(e);
+		}
 		this.taste = taste;
 		this.macro = macro;
 	}

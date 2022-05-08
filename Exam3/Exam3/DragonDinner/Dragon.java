@@ -17,7 +17,13 @@ public class Dragon implements Serializable{
 	public Dragon(String name, LocalDate birthDate, int flameIntensity) {
 		super();
 		this.name = name;
-		setBirthDate(birthDate);
+		
+		try {
+			setBirthDate(birthDate);
+		}catch (TooYoungException e) {
+			System.out.println(e);
+		}
+		
 		this.flameIntensity = flameIntensity;
 	}
 
