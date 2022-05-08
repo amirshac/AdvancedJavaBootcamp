@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class GeneratorUtil {
@@ -12,7 +13,7 @@ public class GeneratorUtil {
 	private static final String FILENAMESTREETS = "generator_files/generator_street_names_input.txt";
 	private static final int STREET_NUMBER_MAX = 100;
 	private static final int STREET_NUMBER_MIN = 1;
-	private static final int MIN_YEAR = 1970;
+	private static final int MIN_YEAR = 1950;
 	private static final int MAX_YEAR = LocalDate.now().getYear();
 	
 	protected static Random random;
@@ -57,6 +58,9 @@ public class GeneratorUtil {
 	
 	
 	private static String getRandomStringFromList(ArrayList<String> list) {
+		if (list.isEmpty())
+			init();
+		
 		String string = null;
 		int index = random.nextInt(0, list.size()+1);
 		string = new String(list.get(index));
@@ -108,4 +112,16 @@ public class GeneratorUtil {
 	public static String randomDateString() {
 		return randomDate().toString();
 	}
+	
+	public static String randomPhone() {
+		String phoneNumber = new String();
+		
+		for (int i=0; i<=10;i++) {
+			phoneNumber += Integer.toString(random.nextInt(0,10));
+		}
+		
+		return phoneNumber;
+	}
+	
 }
+

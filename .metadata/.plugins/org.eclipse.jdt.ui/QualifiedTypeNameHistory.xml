@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javabootcamp.oopexam.Toy.Toy"/>
-    <fullyQualifiedTypeName name="javabootcamp.oopexam.Kid.Kid"/>
-    <fullyQualifiedTypeName name="javabootcamp.oopexam.DollToy.DollToy"/>
-    <fullyQualifiedTypeName name="javabootcamp.oopexam.ElectricToy.ElectricToy"/>
-    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
-    <fullyQualifiedTypeName name="java.io.Reader"/>
-    <fullyQualifiedTypeName name="java.io.Writer"/>
-    <fullyQualifiedTypeName name="ajbc.files.stream_reader_writer.StreamReaderWriter"/>
-    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-    <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
-    <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-    <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.BufferReaderWriter"/>
-    <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.PrintWriterDemo"/>
     <fullyQualifiedTypeName name="ajbc.files.print_writer.FileExercise"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -31,12 +18,9 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.TestInstance.Lifecycle"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.TestInstance"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
     <fullyQualifiedTypeName name="Testing.Shirts.Shirt.SIZE"/>
     <fullyQualifiedTypeName name="javax.net.ssl.SSLEngineResult.Status"/>
     <fullyQualifiedTypeName name="javabootcamp.oop.enumeration.StatusCode.Status"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ListIterator"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="ScoreBoard.Game"/>
@@ -44,7 +28,6 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
@@ -54,10 +37,27 @@
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="files.buffered_reader_writer.Buffered"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="GeneratorUtil.GeneratorUtil"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="Generics.Reverse"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="DragonDinner.Food.Taste"/>
+    <fullyQualifiedTypeName name="DragonDinner.Food"/>
+    <fullyQualifiedTypeName name="DragonDinner.Food.Macro"/>
+    <fullyQualifiedTypeName name="DragonDinner.Dragon"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="DragonDinner.ObjectReaderWriter"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="DragonDinner.NonCapitalizedException"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="DragonDinner.TooYoungException"/>
 </qualifiedTypeNameHistroy>

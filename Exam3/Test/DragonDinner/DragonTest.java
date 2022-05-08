@@ -50,7 +50,7 @@ class DragonTest {
 		LocalDate date;
 		
 		date = LocalDate.of(888, 8, 7);
-		exception = assertThrows(Exception.class, ()-> dragonArr[0].setBirthDate(date) );		
+		exception = assertThrows(TooYoungException.class, ()-> dragonArr[0].setBirthDate(date) );		
 	}
 	
 	@Test
