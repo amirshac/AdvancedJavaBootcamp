@@ -28,25 +28,12 @@ public class Runner {
 		
 		int numObjectsToSave = 2;
 		
+		System.out.println("Writing 2 objects to file.");
 		ObjectReaderWriter.saveRandomObjectsToFile(objArr, numObjectsToSave);
+		System.out.println("saved.");
 		
-		ObjectReaderWriter.printObjectsFromFile();
-		
-		try {
-			food1.setName("hotdog");
-		} catch (NonCapitalizedException e) {
-			System.out.println(e);
-		}
-		
-		try {
-			food1.setName("Hotdog");
-		} catch (NonCapitalizedException e) {
-			System.out.println(e);
-		}
-		
-		// too young exception
-		dragon1.setBirthDate(LocalDate.of(888, 8, 7));
-		
+		System.out.println("\nReading from file:");
+		ObjectReaderWriter.printObjectsFromFile();	
 	}
 
 }

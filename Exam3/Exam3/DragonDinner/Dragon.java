@@ -9,6 +9,8 @@ public class Dragon implements Serializable{
 	 */
 	private static final long serialVersionUID = 7411252254917150802L;
 	private static final LocalDate TOOYOUNG_DATE = LocalDate.of(888, 8, 8);
+	private static final int FLAME_MIN = 0;
+	private static final int FLAME_MAX = 10;
 	
 	String name;
 	LocalDate birthDate;
@@ -24,7 +26,7 @@ public class Dragon implements Serializable{
 			System.out.println(e);
 		}
 		
-		this.flameIntensity = flameIntensity;
+		setFlameIntensity(flameIntensity);
 	}
 
 	@Override
@@ -37,6 +39,13 @@ public class Dragon implements Serializable{
 			throw new TooYoungException();
 		
 		this.birthDate = date;
+	}
+	
+	public void setFlameIntensity(int num) {
+		if (num < FLAME_MIN) num = FLAME_MIN;
+		else if (num > FLAME_MAX) num = FLAME_MAX;
+		
+		this.flameIntensity = num;
 	}
 	
 }

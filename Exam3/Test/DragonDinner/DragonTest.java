@@ -30,14 +30,44 @@ class DragonTest {
 	}
 	
 	@Test
+	@DisplayName("setAge works properly")
+	void testSetAge() {
+		LocalDate date;
+		date = LocalDate.of(888, 8, 8);
+		
+		try {
+			dragonArr[0].setBirthDate(date);
+		}catch (TooYoungException e) {
+			fail("shouldn't throw exception");
+		}
+	}
+	
+	@Test
 	@DisplayName("setAge throws exception")
 	
 	void testSetAgeException() {
-		Exception exception = null;
+		Exception exception;
 		LocalDate date;
 		
 		date = LocalDate.of(888, 8, 7);
 		exception = assertThrows(Exception.class, ()-> dragonArr[0].setBirthDate(date) );		
+	}
+	
+	@Test
+	@DisplayName("setAge throws exception test 2")
+	
+	void testSetAgeException2() {
+		LocalDate date;
+		date = LocalDate.of(888, 7, 8);
+		TooYoungException expectedException = new TooYoungException();
+		
+		try {
+			dragonArr[0].setBirthDate(date);
+			fail("SetAge didnt throw exception");
+		}catch (TooYoungException e) {
+			assertEquals(e.getClass(), expectedException.getClass() );
+		}
+				
 	}
 
 }
