@@ -13,9 +13,22 @@ public class Food implements Serializable {
 	protected Macro macro;
 	
 	public Food(String name, Taste taste, Macro macro) {
-		this.name = name;
+		setName(name);
 		this.taste = taste;
 		this.macro = macro;
+	}
+	
+	public boolean isDesert() {
+		return (this.taste == Taste.SWEET && this.macro == Macro.CARB );
+	}
+	
+	public void setName(String name) throws NonCapitalizedException {
+		if (name == null)
+			throw new NonCapitalizedException();
+		
+		Character firstLetter = name.charAt(0);
+		if (!Character.isUpperCase(firstLetter))
+			throw new NonCapitalizedException();
 	}
 	
 	public enum Taste{

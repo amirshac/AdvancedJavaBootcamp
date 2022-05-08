@@ -26,6 +26,7 @@ public class Runner {
 		};
 		
 		int numObjectsToSave = 2;
+		
 		ObjectReaderWriter.saveRandomObjectsToFile(objArr, numObjectsToSave);
 		
 		ObjectReaderWriter.printObjectsFromFile();
