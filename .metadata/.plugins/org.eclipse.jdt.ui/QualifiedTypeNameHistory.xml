@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Airport.Flight"/>
-    <fullyQualifiedTypeName name="java.util.Stack"/>
-    <fullyQualifiedTypeName name="javabootcamp.oopexam.Playable.Playable"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.Toy.Toy"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.Kid.Kid"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.DollToy.DollToy"/>
     <fullyQualifiedTypeName name="javabootcamp.oopexam.ElectricToy.ElectricToy"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.Reader"/>
     <fullyQualifiedTypeName name="java.io.Writer"/>
     <fullyQualifiedTypeName name="ajbc.files.stream_reader_writer.StreamReaderWriter"/>
@@ -17,7 +12,6 @@
     <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
     <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
     <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.BufferReaderWriter"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="ajbc.files.buffer_reader_writer.PrintWriterDemo"/>
     <fullyQualifiedTypeName name="ajbc.files.print_writer.FileExercise"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -54,10 +48,16 @@
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="Utils.stringGenerator"/>
     <fullyQualifiedTypeName name="Utils.Utils"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="files.buffered_reader_writer.Buffered"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="GeneratorUtil.GeneratorUtil"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
