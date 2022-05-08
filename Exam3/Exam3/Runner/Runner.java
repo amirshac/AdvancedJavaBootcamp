@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import DragonDinner.Dragon;
 import DragonDinner.Food;
+import DragonDinner.ObjectReaderWriter;
 import DragonDinner.Food.Macro;
 import DragonDinner.Food.Taste;
 
@@ -15,8 +16,19 @@ public class Runner {
 		Food food2 = new Food("Chicken", Taste.SOUR, Macro.PROTEIN);
 		Dragon dragon1 = new Dragon("Uzuki", LocalDate.of(888, 8, 8), 10);
 		Dragon dragon2 = new Dragon("Uldiun", LocalDate.of(1934, 12, 5), 2);
-
-
+		
+		
+		Object objArr[] = new Object[] {
+				food1,
+				food2,
+				dragon1,
+				dragon2
+		};
+		
+		int numObjectsToSave = 2;
+		ObjectReaderWriter.saveRandomObjectsToFile(objArr, numObjectsToSave);
+		
+		ObjectReaderWriter.printObjectsFromFile();
 	}
 
 }
