@@ -33,6 +33,8 @@ public class Food implements Serializable {
 		Character firstLetter = name.charAt(0);
 		if (!Character.isUpperCase(firstLetter))
 			throw new NonCapitalizedException();
+		
+		this.name = name;
 	}
 	
 	public enum Taste{
