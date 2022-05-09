@@ -74,7 +74,7 @@ public class Board {
 	
 	public void resetSubmarines() {
 		data.replaceData('H', 'B');
-		data.replaceData('x', (char)0);
+		data.replaceData('m', (char)0);
 	}
 }
 

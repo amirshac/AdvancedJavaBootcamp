@@ -19,7 +19,7 @@ public class SubGame {
 	protected final int SCORE_LOSS_ON_MISS = 10;
 	protected final int SCORE_ON_FIRST_HIT = 200;
 	protected final int SCORE_ON_CONSECUTIVE_HIT = 1000;
-	
+		
 	protected Board logicBoard;
 	protected Board playerBoard;
 	protected boolean isReplay;
@@ -63,16 +63,17 @@ public class SubGame {
 	}
 	
 	public void init(){
-		generateSubmarines();
 		//Submarine testSub = new SubmarineTypeD();
 		//logicBoard.placeSubmarine(testSub, 0,19);
+		
+		generateSubmarines();
 		placeSubmarinesOnBoard();
 	}
 	
 	public void start() {
 		init();
-		testPlay();
-		replayFromFile();
+		play();
+		//replayFromFile();
 	}
 	
 	protected void getUserInput() throws InputException{
@@ -88,7 +89,7 @@ public class SubGame {
 	protected void handleUserInput() {
 		boolean success = false;
 		
-		while (!success) {
+		while (!success) { 
 			try {
 				getUserInput();
 			}catch (InputException e) {
@@ -113,10 +114,10 @@ public class SubGame {
 			logicBoard.setData('H', inputY, inputX);
 			
 			if (isConsecutiveHit) {
-				System.out.println("Consecutive Hit!");
+				System.out.println("Consecutive Hit!" + SCORE_ON_CONSECUTIVE_HIT + " points!");
 				player.addScore(SCORE_ON_CONSECUTIVE_HIT);
 			} else {
-				System.out.println("Hit!");
+				System.out.println("Hit! " + SCORE_ON_FIRST_HIT + "points!");
 				player.addScore(SCORE_ON_FIRST_HIT);	
 			}
 						
@@ -157,10 +158,16 @@ public class SubGame {
 			throw new OutOfTargetsException("Eliminated all submarines, out of targets");
 	}
 	
-	public void testPlay() {
+	public void play() {
 		isReplay = false;
 		boolean run = true;
 		while (run){
+			
+			if (player.getScore() <= 0) {
+				run = false;
+				System.out.println("Game over");
+				break;
+			}
 			
 			player.printStatus();
 			playerBoard.print();
@@ -173,19 +180,21 @@ public class SubGame {
 				run = false;
 				break;
 			}
-			
+				
 			updateBoard();
 			
 			player.printLastGuess();
 	
 			try {
 				checkTargetStatus();
+				
 			}catch (OutOfTargetsException e) {
 				System.out.println(e);
 				logicBoard.print();
 				run = false;
 				Input.pressEnter();
 				break;
+				
 			} finally {
 				FileHandler.saveObjectToFile(player, "player.dat");
 			}
