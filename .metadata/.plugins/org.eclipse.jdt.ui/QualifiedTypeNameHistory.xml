@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="ajbc.files.object_reader_writer.ObjectReaderWriter"/>
-    <fullyQualifiedTypeName name="CustomeTshirts.Color"/>
     <fullyQualifiedTypeName name="CustomeTshirts.Design"/>
     <fullyQualifiedTypeName name="CustomeTshirts.Tshirt"/>
     <fullyQualifiedTypeName name="myBasicCalculator.Calculator.Operation"/>
@@ -21,7 +18,6 @@
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="Utils.stringGenerator"/>
     <fullyQualifiedTypeName name="Utils.Utils"/>
@@ -29,7 +25,6 @@
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="files.buffered_reader_writer.Buffered"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="files.ObjectRW.ObjectRW"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Stream.Exercise.GameCharacter.Continent"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 </qualifiedTypeNameHistroy>

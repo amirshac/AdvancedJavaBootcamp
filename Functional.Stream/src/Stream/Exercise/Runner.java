@@ -19,12 +19,12 @@ public class Runner {
 				new GameCharacter("Sylvanas Windrunner", "Dark Ranger", "Undercity", 120, 1100,
 						Continent.Eastern_Kingdoms));
 		
-		List<GameCharacter> fromKalimdorList = characters
+		List<String> fromKalimdorList = characters
 				.stream()
 				.filter(p -> p.getContinent()==Continent.Kalimdor)
-				.collect(Collectors.toList());
+				.map(p -> p.getName()).toList();
 		
-		System.out.println("All from kalimdor");
+		System.out.println("Names from kalimdor");
 		fromKalimdorList.forEach(p->System.out.println(p));
 		
 		System.out.println("----------------------------------------------------\n");
@@ -36,9 +36,17 @@ public class Runner {
 		System.out.println("----------------------------------------------------\n");
 		
 		System.out.println("Average hit points of characters in level 120 only");
+		List<Double> hitPoints = characters.stream().filter(p->p.getLevel() == 120).map(p->p.hitPoints).toList();
+		Double averageHitPoints = hitPoints.stream().reduce(0.0, (t, u) -> t+u) / hitPoints.size();
+		System.out.println(hitPoints);
+		System.out.println(averageHitPoints);
 		
-		Stream<GameCharacter> groupStream = characters.stream().filter(p->p.getLevel()==120).		
+		System.out.println("Creating new game characters from name list");
 		
+		List<String> names = List.of("Uzugi", "Mushugi", "Buzugi", "Ferdinand", "Casparov");
+		
+		List<GameCharacter> newCharacters = names.stream().map((name) -> new GameCharacter(name, "Orc", "Ogimar", 10, 1500, Continent.Eastern_Kingdoms)).collect(Collectors.toList());
+		newCharacters.forEach(p->System.out.println(p));
 	}
 }
 
