@@ -196,7 +196,7 @@ public class SubGame {
 				break;
 				
 			} finally {
-				FileHandler.saveObjectToFile(player, "player.dat");
+				//FileHandler.saveObjectToFile(player, "player.dat");
 			}
 			
 		}// end while
