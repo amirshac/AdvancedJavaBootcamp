@@ -9,14 +9,20 @@ public class Player implements Serializable {
 	private static final long serialVersionUID = 1477822252627199309L;
 
 	private final int GUESS_ARRAY_SIZE = 2000;
+	private final int MAX_GUESSES = 100;
+	private final int SCORE_START = 1000;
 	
-	String name;
-	String email;
-	String phoneNumber;
+	//TODO: player score
+	protected String name;
+	protected String email;
+	protected String phoneNumber;
 	
-	Guess[] guessArr;
-	int guessIndex;
-	int currIndex;
+	protected Guess[] guessArr;
+	protected int guessIndex;
+	protected int currIndex;
+	
+	protected int guessLeft;
+	protected int score;
 	
 	public Player(String name, String email, String phoneNumber) {
 		super();
@@ -26,6 +32,8 @@ public class Player implements Serializable {
 		this.currIndex = 0;
 	
 		guessArr = new Guess[GUESS_ARRAY_SIZE];
+		guessLeft = MAX_GUESSES;
+		score = SCORE_START;
 	}
 	
 	public void addGuess(int x, int y) {
@@ -37,6 +45,7 @@ public class Player implements Serializable {
 		Guess newGuess = new Guess(x, y);
 		guessArr[guessIndex] = newGuess;
 		guessIndex ++;
+		guessLeft--;
 	}
 	
 	public Guess getGuess(int index) {
@@ -76,5 +85,29 @@ public class Player implements Serializable {
 	public void printGuess(int index) {
 		System.out.println(guessArr[index]);
 	}
+	
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	public void addScore(int add) {
+		this.score += add;
+	}
+	
+	public void subtractScore(int num) {
+		this.score -= num;
+	}
+
+	public void printStatus() {
+		String msg = this.name + " Score:" + this.score + " Guesses Left: " + this.guessLeft;
+		System.out.println(msg);
+	}
+	
+	@Override
+	public String toString() {
+		return "Player [name=" + name + ", email=" + email + ", phoneNumber=" + phoneNumber + ", score=" + score + "]";
+	}
+
+	
 
 }

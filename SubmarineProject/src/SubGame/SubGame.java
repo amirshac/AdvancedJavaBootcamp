@@ -15,15 +15,20 @@ import submarines.*;
 import FileHandler.*;
 
 public class SubGame {
-	final static int NUM_OF_SUBS = 5;
-	private Board logicBoard;
-	private Board playerBoard;
-	private boolean isReplay;
-	private Player player;
+	protected final int NUM_OF_SUBS = 5;
+	protected final int SCORE_LOSS_ON_MISS = 10;
+	protected final int SCORE_ON_FIRST_HIT = 200;
+	protected final int SCORE_ON_CONSECUTIVE_HIT = 1000;
 	
-	private int inputX, inputY;
+	protected Board logicBoard;
+	protected Board playerBoard;
+	protected boolean isReplay;
+	protected Player player;
 	
-	Submarine[] subArr;
+	protected int inputX, inputY;
+	protected boolean isConsecutiveHit;
+	
+	protected Submarine[] subArr;
 	
 	public SubGame() {
 		logicBoard = new Board();
@@ -33,6 +38,7 @@ public class SubGame {
 		player = new Player("Gabi Kapsarov", "kas@gmail.com", "0525554432");
 		
 		isReplay = false;
+		isConsecutiveHit = false;
 	}
 	
 	private void generateSubmarines() {
@@ -103,13 +109,23 @@ public class SubGame {
 		
 		switch(data) {
 		case 'B' :
-			System.out.println("Hit!");
 			playerBoard.setData('H', inputY, inputX);
 			logicBoard.setData('H', inputY, inputX);
+			
+			if (isConsecutiveHit) {
+				System.out.println("Consecutive Hit!");
+				player.addScore(SCORE_ON_CONSECUTIVE_HIT);
+			} else {
+				System.out.println("Hit!");
+				player.addScore(SCORE_ON_FIRST_HIT);	
+			}
+						
 			if (!isReplay) player.addGuess(inputX, inputY);
+			
+			isConsecutiveHit = true;
 			break;
 			
-		case 'x' :
+		case 'm' :
 			System.out.println("you already guessed there");
 			break;
 
@@ -119,16 +135,20 @@ public class SubGame {
 			
 		case 0 :
 			System.out.println("miss");
-			playerBoard.setData('x', inputY, inputX);
-			logicBoard.setData('x', inputY, inputX);
-			if (!isReplay) player.addGuess(inputX, inputY);
+			playerBoard.setData('m', inputY, inputX);
+			logicBoard.setData('m', inputY, inputX);
+			player.subtractScore(SCORE_LOSS_ON_MISS);
+			if (!isReplay) {
+				player.addGuess(inputX, inputY);
+			}
+			
+			isConsecutiveHit = false;
 			break;
 			
 		default:
 			System.out.println("unknown");
 			break;
-		}
-		
+		}	
 	}
 	
 	protected void checkTargetStatus() throws OutOfTargetsException {
@@ -142,10 +162,11 @@ public class SubGame {
 		boolean run = true;
 		while (run){
 			
+			player.printStatus();
 			playerBoard.print();
 			
-			//handleUserInput();
-			autoPlay();
+			handleUserInput();
+			//autoPlay();
 			
 			if (inputX < 0 || inputY < 0) {
 				System.out.println("quitting");
