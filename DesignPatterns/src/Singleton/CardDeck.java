@@ -9,9 +9,15 @@ public class CardDeck {
 
 	private static final int SIZE = 60;
 	
-	private static CardDeck instance = null;
-
+	private static CardDeck instance;
+	private static Random random;
+	
 	protected ArrayList<Integer> cards;
+	
+	static {
+		instance = null;
+		random = new Random();
+	}
 	
 	private CardDeck() {
 		populateCards();
@@ -34,7 +40,6 @@ public class CardDeck {
 	}
 	
 	public int takeCard() {
-		Random random = new Random();
 		int index = random.nextInt(0, cards.size());
 		int card = cards.remove(index);
 		return card;
