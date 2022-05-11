@@ -4,9 +4,11 @@ public class Player {
 	protected String name;
 	protected int card;
 	protected int score;
+	CardDeck deck;
 	
-	public Player(String name) {
+	public Player(String name, CardDeck deck) {
 		this.name = name;
+		this.deck = CardDeck.getInstance();
 		card = 0;
 		score = 0;
 	}
@@ -19,8 +21,8 @@ public class Player {
 		card = value;
 	}
 	
-	public void takeCard(CardDeck deck) {
-		card = deck.getInstance().takeCard();
+	public void takeCard() {
+		card = deck.takeCard();
 	}
 
 	@Override
