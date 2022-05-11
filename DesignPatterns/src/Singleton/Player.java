@@ -6,7 +6,7 @@ public class Player {
 	protected int score;
 	CardDeck deck;
 	
-	public Player(String name, CardDeck deck) {
+	public Player(String name) {
 		this.name = name;
 		this.deck = CardDeck.getInstance();
 		card = 0;

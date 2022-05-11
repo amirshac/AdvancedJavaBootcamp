@@ -12,10 +12,10 @@ public class Game {
 	
 	public void populatePlayers() {
 		players = new ArrayList<Player>();
-		players.add(new Player("Amir",deck));
-		players.add(new Player("Ben",deck));
-		players.add(new Player("Cassandra",deck));
-		players.add(new Player("David",deck));	
+		players.add(new Player("Amir"));
+		players.add(new Player("Ben"));
+		players.add(new Player("Cassandra"));		
+		players.add(new Player("David"));	
 	}
 	
 	public void playGame() {

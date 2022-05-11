@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Runner {
 
+	private static ThemeFactory themeFactory;
+	
 	public static void main(String[] args) {
-		Theme theme = null;
+		
 		int input = 0;
 		
 		Scanner scanner = new Scanner(System.in);
@@ -15,12 +17,13 @@ public class Runner {
 		input = Integer.parseInt(scanner.nextLine());
 		
 		if (input == 1) {
-			theme = new BrightTheme();
+			themeFactory = new BrightThemeFactory();
 		}else {
-			theme = new DarkTheme();
+			themeFactory = new DarkThemeFactory();
 		}
 		
-		theme.render();
+		Theme theme = themeFactory.createTheme();
+		System.out.println(theme);
 		
 		scanner.close();
 	}

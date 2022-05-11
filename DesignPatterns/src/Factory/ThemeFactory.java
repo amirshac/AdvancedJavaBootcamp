@@ -1,5 +1,5 @@
 package Factory;
 
-public interface Theme {
-	public void render();
+public interface ThemeFactory {
+	public abstract Theme createTheme();
 }

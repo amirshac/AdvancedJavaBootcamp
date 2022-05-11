@@ -1,10 +1,10 @@
 package Factory;
 
-public class DarkTheme implements Theme{
+public class DarkThemeFactory implements ThemeFactory{
 
 	@Override
-	public void render() {
-		System.out.println("Dark Theme");
+	public Theme createTheme() {
+		return new DarkTheme();
 	}
 
 }
