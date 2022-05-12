@@ -1,4 +1,4 @@
-package Singleton;
+package patterns.singleton;
 
 public class Player {
 	protected String name;

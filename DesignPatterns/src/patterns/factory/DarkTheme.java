@@ -1,4 +1,4 @@
-package Factory;
+package patterns.factory;
 
 public class DarkTheme extends Theme {
 	public DarkTheme() {

@@ -1,4 +1,4 @@
-package Factory;
+package patterns.factory;
 
 public abstract class Theme {
 	
@@ -22,4 +22,7 @@ public abstract class Theme {
 		return "Theme [text=" + text + ", background=" + background + "]";
 	}
 	
+	public void render() {
+		System.out.println(this);
+	}
 }

@@ -1,4 +1,4 @@
-package Factory;
+package patterns.factory;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Runner {
 		}
 		
 		Theme theme = themeFactory.createTheme();
-		System.out.println(theme);
+		theme.render();
 		
 		scanner.close();
 	}
