@@ -10,7 +10,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1648998703631"/>
     <tags>topLevel</tags>
-    <tags>shellMinimized</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_VHlwktEmEey_uM6cyfu8Nw" selectedElement="_VHlwk9EmEey_uM6cyfu8Nw" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_VHlwk9EmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_VHlwlNEmEey_uM6cyfu8Nw">
         <children xsi:type="advanced:Perspective" xmi:id="_VHlwlNEmEey_uM6cyfu8Nw" elementId="org.eclipse.jdt.ui.JavaPerspective" selectedElement="_VHlwldEmEey_uM6cyfu8Nw" label="Java" iconURI="platform:/plugin/org.eclipse.jdt.ui/$nl$/icons/full/eview16/jperspective.png">
@@ -110,9 +110,9 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_VHlwoNEmEey_uM6cyfu8Nw" containerData="8274" selectedElement="_VHlwodEmEey_uM6cyfu8Nw" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_VHlwodEmEey_uM6cyfu8Nw" containerData="5000" selectedElement="_VHlwotEmEey_uM6cyfu8Nw">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_VHlwodEmEey_uM6cyfu8Nw" containerData="5000" selectedElement="_VHlwo9EmEey_uM6cyfu8Nw">
                 <children xsi:type="advanced:Placeholder" xmi:id="_VHlwotEmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.editorss" containerData="5000" ref="_VHmYYNEmEey_uM6cyfu8Nw"/>
-                <children xsi:type="basic:PartStack" xmi:id="_VHlwo9EmEey_uM6cyfu8Nw" elementId="bottom" containerData="1862" selectedElement="_VHlwqNEmEey_uM6cyfu8Nw">
+                <children xsi:type="basic:PartStack" xmi:id="_VHlwo9EmEey_uM6cyfu8Nw" elementId="bottom" containerData="1862" selectedElement="_VHlwq9EmEey_uM6cyfu8Nw">
                   <tags>org.eclipse.e4.secondaryDataStack</tags>
                   <tags>Java</tags>
                   <tags>Debug</tags>
@@ -538,7 +538,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_VHmYqdEmEey_uM6cyfu8Nw" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Terminal" iconURI="platform:/plugin/org.eclipse.tm.terminal.view.ui/icons/eview16/terminal_view.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.tm.terminal.view.ui.view.TerminalsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.tm.terminal.view.ui"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view>&#xD;&#xA;&lt;terminalConnections id=&quot;org.eclipse.tm.terminal.view.ui.TerminalsView&quot;>&#xD;&#xA;&lt;connection delegateId=&quot;org.eclipse.tm.terminal.connector.local.launcher.local&quot; encoding=&quot;UTF-8&quot; process.args=&quot;--login -i&quot; process.path=&quot;C:\Program Files\Git\bin\sh.exe&quot; process.working_dir=&quot;C:\Users\amirs\eclipse-AdvancedJavaBootcamp\Exam3\Exam3&quot; terminal.forceNew=&quot;true&quot; tm.terminal.connector.id=&quot;org.eclipse.tm.terminal.connector.local.LocalConnector&quot; translateBackslashesOnPaste=&quot;true&quot;/>&#xD;&#xA;&lt;connection delegateId=&quot;org.eclipse.tm.terminal.connector.local.launcher.local&quot; encoding=&quot;UTF-8&quot; process.args=&quot;--login -i&quot; process.path=&quot;C:\Program Files\Git\bin\sh.exe&quot; process.working_dir=&quot;C:\Users\amirs\eclipse-AdvancedJavaBootcamp\DesignPatterns\src\Factory&quot; terminal.forceNew=&quot;true&quot; tm.terminal.connector.id=&quot;org.eclipse.tm.terminal.connector.local.LocalConnector&quot; translateBackslashesOnPaste=&quot;true&quot;/>&#xD;&#xA;&lt;/terminalConnections>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view>&#xD;&#xA;&lt;terminalConnections id=&quot;org.eclipse.tm.terminal.view.ui.TerminalsView&quot;>&#xD;&#xA;&lt;connection delegateId=&quot;org.eclipse.tm.terminal.connector.local.launcher.local&quot; encoding=&quot;UTF-8&quot; process.args=&quot;--login -i&quot; process.path=&quot;C:\Program Files\Git\bin\sh.exe&quot; process.working_dir=&quot;C:\Users\amirs\eclipse-AdvancedJavaBootcamp\Exam4\src\Exam4&quot; terminal.forceNew=&quot;true&quot; tm.terminal.connector.id=&quot;org.eclipse.tm.terminal.connector.local.LocalConnector&quot; translateBackslashesOnPaste=&quot;true&quot;/>&#xD;&#xA;&lt;/terminalConnections>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Terminal</tags>
       <menus xmi:id="_VHmYqtEmEey_uM6cyfu8Nw" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView">
@@ -672,13 +672,13 @@
       <tags>categoryTag:CodeTogether</tags>
     </sharedElements>
     <trimBars xmi:id="_VHmYydEmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.platform">
-      <children xsi:type="menu:ToolBar" xmi:id="_VHmYytEmEey_uM6cyfu8Nw" elementId="group.file" toBeRendered="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_VHmYytEmEey_uM6cyfu8Nw" visible="false">
         <tags>toolbarSeparator</tags>
-        <children xsi:type="menu:ToolBarSeparator" xmi:id="_VHmYy9EmEey_uM6cyfu8Nw" elementId="group.file" toBeRendered="false"/>
+        <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VHmYzNEmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_eFXwMNGwEey4v5LrFsYlAw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_VHo0HdEmEey_uM6cyfu8Nw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_LgLjoNHlEey3sZfbhbWMoQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_VHo0HdEmEey_uM6cyfu8Nw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VHmY2dEmEey_uM6cyfu8Nw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -709,7 +709,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VHmZJdEmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_eFaMcNGwEey4v5LrFsYlAw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_VHoPX9EmEey_uM6cyfu8Nw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_LgNY0dHlEey3sZfbhbWMoQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_VHoPX9EmEey_uM6cyfu8Nw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VHmZMdEmEey_uM6cyfu8Nw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -721,6 +721,10 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VHmZNdEmEey_uM6cyfu8Nw" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_LgEO4NHlEey3sZfbhbWMoQ" elementId="group.file" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_LgEO4dHlEey3sZfbhbWMoQ" elementId="group.file" toBeRendered="false"/>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_VHmZONEmEey_uM6cyfu8Nw" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
