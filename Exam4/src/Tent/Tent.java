@@ -1,6 +1,6 @@
 package Tent;
 
-public class Tent {
+public class Tent{
 	protected int numPeople;
 	protected double width;
 	protected double height;
