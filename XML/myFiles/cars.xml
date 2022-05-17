@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+  <car>
+    <manufacturer>Lotus</manufacturer>
+    <model>Esprit</model>
+    <year>1958</year>
+    <plate type="unique">
+      <platenumber>0</platenumber>
+      <platecolor>YELLOW</platecolor>
+    </plate>
+  </car>
+  <car>
+    <manufacturer>Toyota</manufacturer>
+    <model>Supra</model>
+    <year>1932</year>
+    <plate type="unique">
+      <platenumber>1</platenumber>
+      <platecolor>GREEN</platecolor>
+    </plate>
+  </car>
+  <car>
+    <manufacturer>Pontiac</manufacturer>
+    <model>Trans Am</model>
+    <year>1981</year>
+    <plate type="unique">
+      <platenumber>2</platenumber>
+      <platecolor>WHITE</platecolor>
+    </plate>
+  </car>
+  <car>
+    <manufacturer>DeLorean</manufacturer>
+    <model>DMC-12</model>
+    <year>1985</year>
+    <plate type="unique">
+      <platenumber>3</platenumber>
+      <platecolor>WHITE</platecolor>
+    </plate>
+  </car>
+</cars>

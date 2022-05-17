@@ -1,0 +1,45 @@
+{
+	"class": {
+		"studentArr": [
+			{
+				"id": 1,
+				"isMale": true,
+				"firstName": "Moshe",
+				"lastName": "Ivgi",
+				"notes": {
+					"id": 1,
+					"from": "Moshe",
+					"to": "Moshe",
+					"message": "this is a note"
+				}
+			},
+			{
+				"id": 2,
+				"isMale": false,
+				"firstName": "Sarah",
+				"lastName": "Geller",
+				"notes": null
+			},
+			{
+				"id": 3,
+				"isMale": true,
+				"firstName": "Ben",
+				"lastName": "Keller",
+				"noteArr": [
+					{
+						"id": 2,
+						"from": "someone",
+						"to": "you",
+						"message": "this is a note too"
+					},
+					{
+						"id": 3,
+						"from": "someone else",
+						"to": "you",
+						"message": "this is a note three"
+					}
+				]
+			}
+		]
+	}
+}

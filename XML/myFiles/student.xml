@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+	<student id="111">
+		<gender>male</gender>
+		<firstName>Moshe</firstName>
+		<lastName>Ivgi</lastName>
+		<note>
+			<id>1</id>
+			<from>Moshe</from>
+			<to>Hedva</to>
+			<message>Hellooo</message>
+		</note>
+	</student>
+	
+	<student id="222">
+		<gender>male</gender>
+		<firstName>Yair</firstName>
+		<lastName>Weiss</lastName>
+	</student>
+	
+	<student id="333">
+		<gender>female</gender>
+		<firstName>Hedva</firstName>
+		<lastName>Bar</lastName>
+		<note id = "1">
+			<from>Hedva</from>
+			<to>Moshe</to>
+			<message>Hello back</message>
+		</note>
+		<note id = "2">
+			<from>Hedva</from>
+			<to>Moshe</to>
+			<message>Blabla</message>
+		</note>
+	</student>
+</class>
