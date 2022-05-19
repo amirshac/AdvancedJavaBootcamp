@@ -1,0 +1,48 @@
+[
+	{
+		"name": "Cinnamon Swirl",
+		"callories": 500,
+		"label": "PARVE",
+		"ingridients": [
+			{
+				"name": "flour",
+				"weight": 10.5
+			},
+			{
+				"name": "sugar",
+				"weight": 2.0
+			},
+			{
+				"name": "buttermilk",
+				"weight": 3.5
+			},
+			{
+				"name": "egg",
+				"weight": 2.0
+			}
+		]
+	},
+	{
+		"name": "Chocolate Banana Bundles",
+		"callories": 900,
+		"label": "DAIRY",
+		"ingridients": [
+			{
+				"name": "butter",
+				"weight": 3.0
+			},
+			{
+				"name": "sugar",
+				"weight": 4.0
+			},
+			{
+				"name": "banana",
+				"weight": 5.5
+			},
+			{
+				"name": "egg",
+				"weight": 3.5
+			}
+		]
+	}
+]
