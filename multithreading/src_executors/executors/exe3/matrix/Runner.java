@@ -1,4 +1,4 @@
-package executors.exe3;
+package executors.exe3.matrix;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Runner {
 
-	private static final int SIZE = 5;
-	private static final int NUM_THREADS = 3;
+	private static final int SIZE = 2000;
+	//private static final int NUM_THREADS = 3;
 
 	private static final int[][] A = new int[SIZE][SIZE];
 	private static final int[][] B = new int[SIZE][SIZE];
@@ -17,11 +17,28 @@ public class Runner {
 
 	public static void main(String[] args) throws InterruptedException {
 		initMatrixes();
+		
+		long startTime, endTime; 
+		float runTime;
+		
+		
+		startTime = System.currentTimeMillis();
+		
 		multiplyMatrixesSerial(A, B, Cserial);
-		printMatrix(Cserial);
+		
+		endTime = System.currentTimeMillis();
+		runTime = (float)(endTime-startTime)/1000;
+		
+		System.out.println("Serial runtime: " + runTime);
 
+		//-----------------------
+		startTime = System.currentTimeMillis();
+		
 		multiplyMatrixesWithThreads(A, B, C);
-		printMatrix(C);
+	
+		endTime = System.currentTimeMillis();
+		runTime = (float)(endTime-startTime)/1000;
+		System.out.println("Threaded runtime: " + runTime);
 	}
 
 	public static void multiplyMatrixesWithThreads(int[][] first, int[][] second, int[][] result) throws InterruptedException {
@@ -58,7 +75,7 @@ public class Runner {
 			for (int k = 0; k < SIZE; k++) {
 				resultMatrix[line][col] += matrixA[line][k] * matrixB[k][col];
 			}
-			System.out.println(Thread.currentThread().getName() + " calculated " + line + "," + col);
+			//System.out.println(Thread.currentThread().getName() + " calculated " + line + "," + col);
 		}
 		
 		

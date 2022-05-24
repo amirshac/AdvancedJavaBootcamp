@@ -1,4 +1,4 @@
-package executors.exe4;
+package executors.exe4.alice;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -30,7 +30,7 @@ public class Runner {
 		while (scanner.hasNext()) {
 			String line = scanner.nextLine().toLowerCase();
 
-			String[] words = line.split(" ");
+			String[] words = line.replaceAll("[.,]?!-_", " ").replace('\"', ' ').split(" ");
 
 			for (String word : words) {
 				if (word.equals(WORD_TO_SEARCH))
@@ -48,22 +48,24 @@ public class Runner {
 		ExecutorService executorService = Executors.newFixedThreadPool(NUM_THREADS);
 		List <Future<Integer>> futures = new ArrayList<Future<Integer>>();
 				
+		long startTime = System.nanoTime();
+		
 		while (scanner.hasNext()) {
 			String line = scanner.nextLine().toLowerCase();
 			
 			// Callable lambda function
 			Future<Integer> future = executorService.submit(()->{
 				int taskCounter = 0;
-				String[] words = line.split(" ");
+				String[] words = line.replaceAll("[.,]?!-_", " ").replace('\"', ' ').split(" ");
 				
 				for (String word: words) {
 					if (word.equals(WORD_TO_SEARCH)) 
 						taskCounter ++;
 				}
 				
-				if (taskCounter > 0) {
-					System.out.println(Thread.currentThread().getName() + " result " + taskCounter);	
-				}
+//				if (taskCounter > 0) {
+//					System.out.println(Thread.currentThread().getName() + " result " + taskCounter);				
+//				}
 				
 				return taskCounter;
 			});
@@ -77,6 +79,9 @@ public class Runner {
 		for (Future<Integer>future : futures) {
 			sum += future.get();
 		}
+		
+		long endTime = System.nanoTime();
+		System.out.println("Threaded time: " + (endTime-startTime));
 
 		System.out.println(WORD_TO_SEARCH + " : " + sum);
 		
