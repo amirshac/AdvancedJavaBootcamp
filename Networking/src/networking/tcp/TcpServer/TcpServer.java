@@ -64,11 +64,11 @@ public class TcpServer {
 			bufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 			line = bufferedReader.readLine();
 		} catch (IOException e) {
-			System.out.println("<TCP Server> Couldn't get line fron client");
+			System.out.println("<TCP Server> Couldn't get line from client");
 			e.printStackTrace();
 		}
 		
-		System.out.println("Client input: " + line);
+		System.out.println("Client sent: " + line);
 		return line;
 	}
 	
