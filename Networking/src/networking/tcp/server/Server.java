@@ -1,14 +1,15 @@
-package networking.tcp.clientserver;
+package networking.tcp.server;
 
 public class Server {
-	private static final int PORT = 8080;
+	private final static int PORT = 8080;
 
 	public static void main(String[] args) throws IOException {
+
 		ServerSocket serverSocket = null;
 		BufferedReader bufferReader = null;
 		PrintWriter writer = null;
-
 		try {
+
 			// start server
 			serverSocket = new ServerSocket(PORT);
 			System.out.println("Server started on port " + PORT);
@@ -21,29 +22,26 @@ public class Server {
 
 				// create reader
 				bufferReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-				
-				// reading
+
+				// reading data
 				String line = bufferReader.readLine();
 				System.out.println("client says: " + line);
-				
+
 				// sending data
 				writer = new PrintWriter(clientSocket.getOutputStream(), true);
-				writer.println("call call call call from server...");
-
+				writer.println("I must have called a thousand times");
 			}
+
 		} catch (IOException e) {
 			System.err.println("Failed to start server on port " + PORT);
 			e.printStackTrace();
 		} finally {
-			if (serverSocket != null) {
+			if (serverSocket != null)
 				serverSocket.close();
-			}
-			if (bufferReader != null) {
+			if (bufferReader != null)
 				bufferReader.close();
-			}
-			if (writer != null) {
-				writer.close();
-			}
 		}
+
 	}
+
 }
