@@ -8,15 +8,15 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TcpClient {
-	String serverName;
-	int serverPort;
+	protected String serverName;
+	protected int serverPort;
 	
-	BufferedReader reader;
-	PrintWriter writer;
+	protected BufferedReader reader;
+	protected PrintWriter writer;
 	
-	Socket clientSocket;
+	protected Socket clientSocket;
 		
-	boolean clientActive;
+	protected boolean clientActive;
 	
 	public TcpClient(String serverName, int serverPort) {
 		this.serverName = serverName;
@@ -75,13 +75,7 @@ public class TcpClient {
 	}
 	
 	protected void sendLineToServer(String lineToSend) {
-		try {
-			writer = new PrintWriter(clientSocket.getOutputStream(), true);
 			writer.println(lineToSend);
-		} catch (IOException e) {
-			System.out.println("<TCP Client> Couldn't send line to client");
-			e.printStackTrace();
-		}
 	}
 	
 	protected void closeConnections() {
@@ -92,6 +86,14 @@ public class TcpClient {
 				reader.close();
 		}catch (IOException e) {
 			
+		}
+	}
+	
+	public void sleep(long milis) {
+		try {
+			Thread.sleep(milis);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 	

@@ -8,14 +8,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TcpServer {
-	int port;
-	ServerSocket serverSocket;
-	BufferedReader bufferedReader;
-	PrintWriter writer;
+	protected int port;
+	protected ServerSocket serverSocket;
+	protected BufferedReader bufferedReader;
+	protected PrintWriter writer;
 	
-	Socket clientSocket;
+	protected Socket clientSocket;
 	
-	boolean serverActive;
+	protected boolean serverActive;
 	
 	public TcpServer(int port) {
 		this.port = port;
@@ -48,7 +48,7 @@ public class TcpServer {
 		}	
 	}
 	
-	protected void waitForConnection() {
+	protected Client waitForConnection() {
 		try {
 			clientSocket = serverSocket.accept();
 			System.out.println("<TCP Server> Client connected");
