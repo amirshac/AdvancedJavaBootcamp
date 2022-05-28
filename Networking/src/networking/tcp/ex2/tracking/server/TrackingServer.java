@@ -31,7 +31,7 @@ public class TrackingServer {
 
 	public void go() throws IOException {
 		serverSocket = new ServerSocket(port);
-		System.out.println("Server started on port " + port);
+		System.out.println("Tracker server started on port " + port);
 		int sessionNumber = 0;
 
 		startPrinterThread();

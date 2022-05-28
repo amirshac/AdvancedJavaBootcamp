@@ -27,11 +27,9 @@ public class TcpClient {
 		clientSocket = null;
 		
 		clientActive = true;
-		startClient();
 	}
 	
-	
-	protected void startClient() {
+	public void startClient() {
 		try {
 			clientSocket = new Socket(serverName, serverPort);
 			initStreamReaderWriter();
