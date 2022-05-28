@@ -8,6 +8,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TcpClient {
+	private final static String DEF_SERVER_NAME = "localhost";
+	private final static int DEF_SERVER_PORT = 8080;
+	
 	protected String serverName;
 	protected int serverPort;
 	
@@ -27,6 +30,10 @@ public class TcpClient {
 		clientSocket = null;
 		
 		clientActive = true;
+	}
+	
+	public TcpClient() {
+		this(DEF_SERVER_NAME, DEF_SERVER_PORT);
 	}
 	
 	public void startClient() {
@@ -76,14 +83,16 @@ public class TcpClient {
 			writer.println(lineToSend);
 	}
 	
-	protected void closeConnections() {
+	public void closeConnections() {
 		try {
 			if (clientSocket != null)
 				clientSocket.close();
 			if (reader != null)
 				reader.close();
+			if (writer != null)
+				writer.close();
 		}catch (IOException e) {
-			
+			System.out.println("Cant close connections");
 		}
 	}
 	

@@ -8,6 +8,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TcpServer {
+	private static final int DEF_PORT = 8080;
+	
 	protected int port;
 	protected ServerSocket serverSocket;
 	protected BufferedReader bufferedReader;
@@ -24,12 +26,13 @@ public class TcpServer {
 		writer = null;
 		clientSocket = null;
 		serverActive = true;
+	}
 		
-		startServer();
+	public TcpServer() {
+		this(DEF_PORT);
 	}
 	
-	
-	protected void startServer() {
+	public void startServer() {
 		try {
 			serverSocket = new ServerSocket(port);
 			System.out.println("<TCP Server> started on port " + port);
@@ -48,7 +51,7 @@ public class TcpServer {
 		}	
 	}
 	
-	protected Client waitForConnection() {
+	protected void waitForConnection() {
 		try {
 			clientSocket = serverSocket.accept();
 			System.out.println("<TCP Server> Client connected");
@@ -82,15 +85,18 @@ public class TcpServer {
 		}
 	}
 	
-	protected void closeConnections() {
+	public void closeConnections() {
 		System.out.println("closing connections");
 		try {
 			if (serverSocket != null)
 				serverSocket.close();
 			if (bufferedReader != null)
 				bufferedReader.close();
+			if (writer != null) {
+				writer.close();
+			}
 		}catch (IOException e) {
-			
+			System.out.println("Can't close connections");
 		}
 	}
 	
