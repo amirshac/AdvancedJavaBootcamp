@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Reset"/>
+		<item key="selection" value="closeConnections"/>
 		<list key="findhistory">
+			<item value="closeConnections"/>
 			<item value="reset"/>
 			<item value="mileage"/>
 			<item value="parsec"/>
@@ -15,9 +16,6 @@
 			<item value="parse"/>
 			<item value="number"/>
 			<item value="scanner"/>
-			<item value="system."/>
-			<item value="new scanner"/>
-			<item value="scam"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ID"/>

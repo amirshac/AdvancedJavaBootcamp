@@ -6,7 +6,7 @@ public class RunnerServer {
 
 	private static int SERVER_PORT = 8080;
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		TrackingServer server = new TrackingServer(SERVER_PORT);
 		server.go();
 	}

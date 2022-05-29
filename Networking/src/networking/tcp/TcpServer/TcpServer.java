@@ -12,7 +12,7 @@ public class TcpServer {
 	
 	protected int port;
 	protected ServerSocket serverSocket;
-	protected BufferedReader bufferedReader;
+	protected BufferedReader reader;
 	protected PrintWriter writer;
 	
 	protected Socket clientSocket;
@@ -22,7 +22,7 @@ public class TcpServer {
 	public TcpServer(int port) {
 		this.port = port;
 		serverSocket = null;
-		bufferedReader = null;
+		reader = null;
 		writer = null;
 		clientSocket = null;
 		serverActive = true;
@@ -64,8 +64,8 @@ public class TcpServer {
 	protected String getLineFromClient() {
 		String line = null;
 		try {
-			bufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-			line = bufferedReader.readLine();
+			reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+			line = reader.readLine();
 		} catch (IOException e) {
 			System.out.println("<TCP Server> Couldn't get line from client");
 			e.printStackTrace();
@@ -90,8 +90,8 @@ public class TcpServer {
 		try {
 			if (serverSocket != null)
 				serverSocket.close();
-			if (bufferedReader != null)
-				bufferedReader.close();
+			if (reader != null)
+				reader.close();
 			if (writer != null) {
 				writer.close();
 			}
